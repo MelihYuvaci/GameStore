@@ -43,7 +43,7 @@ class OnboardVC: UIViewController {
     
     
     @IBAction func skipButtonClicked(_ sender: UIButton) {
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "HomeVC") as? HomeVC {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "Tabbar") as? UITabBarController {
                     navigationController?.pushViewController(vc, animated: true)
             }
     }
