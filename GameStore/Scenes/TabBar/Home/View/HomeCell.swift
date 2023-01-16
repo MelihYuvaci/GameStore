@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class HomeCell: UICollectionViewCell {
 
@@ -17,6 +18,7 @@ class HomeCell: UICollectionViewCell {
 
     }
     func configure(with model: HomeCellModel){
+        imageView.kf.setImage(with: URL.init(string: model.imageURL))
         nameTitle.text = model.name
     }
 

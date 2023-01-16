@@ -26,19 +26,17 @@ class HomeViewModel{
         
     }
     
-    
-    
-    
 }
 
 extension HomeViewModel: HomeModelDelegate{
     
     func didDataFetch() {
-        
+        let cellModels: [HomeCellModel] = model.data.map{.init(imageURL: $0.backgroundImage ?? "", name: $0.name ?? "")}
+        refreshItems?(cellModels)
     }
     
     func didDataCouldntFetch() {
-        
+        onErrorDetected?("Please try again later !")
     }
     
 }

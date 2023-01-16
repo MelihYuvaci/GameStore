@@ -36,7 +36,6 @@ class HomeVCCollectionHelper : NSObject {
         self.items = items
         collectionView?.reloadData()
     }
-    
 }
 
 extension HomeVCCollectionHelper : UICollectionViewDelegate{

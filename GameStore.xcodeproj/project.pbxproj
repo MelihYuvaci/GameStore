@@ -22,6 +22,7 @@
 		299B4EDE2975D7B200E752DB /* HomeVCCollectionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299B4EDD2975D7B200E752DB /* HomeVCCollectionHelper.swift */; };
 		299B4EE12975E20500E752DB /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299B4EDF2975E20500E752DB /* HomeCell.swift */; };
 		299B4EE22975E20500E752DB /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 299B4EE02975E20500E752DB /* HomeCell.xib */; };
+		299B4EE42975F62100E752DB /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299B4EE32975F62100E752DB /* GameData.swift */; };
 		51CC44D524FBC6A12F15B455 /* Pods_GameStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD545E90E37A0505B31FAF2E /* Pods_GameStore.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		299B4EDD2975D7B200E752DB /* HomeVCCollectionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVCCollectionHelper.swift; sourceTree = "<group>"; };
 		299B4EDF2975E20500E752DB /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		299B4EE02975E20500E752DB /* HomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
+		299B4EE32975F62100E752DB /* GameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
 		AD545E90E37A0505B31FAF2E /* Pods_GameStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C65F02272F5B5148D7ED5460 /* Pods-GameStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameStore.debug.xcconfig"; path = "Target Support Files/Pods-GameStore/Pods-GameStore.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -201,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				299B4EDA29758BF400E752DB /* HomeModel.swift */,
+				299B4EE32975F62100E752DB /* GameData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				299B4EB2297559AC00E752DB /* OnboardVC.swift in Sources */,
+				299B4EE42975F62100E752DB /* GameData.swift in Sources */,
 				299B4ED0297561FC00E752DB /* SearchVC.swift in Sources */,
 				299B4ECA29755F0A00E752DB /* HomeVC.swift in Sources */,
 				299B4EE12975E20500E752DB /* HomeCell.swift in Sources */,

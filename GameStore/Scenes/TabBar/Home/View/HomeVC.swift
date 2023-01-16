@@ -31,6 +31,9 @@ private extension HomeVC{
     
     func setupBindings(){
         viewModel.onErrorDetected = {[weak self] message in
+            let alertController = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
+            alertController.addAction(.init(title: "Ok", style: .default))
+            self?.present(alertController, animated: true)
             
         }
         
