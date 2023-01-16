@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class OnboardVC: UIViewController {
 
     @IBOutlet weak var skipButton: UIButton!
     override func viewDidLoad() {
