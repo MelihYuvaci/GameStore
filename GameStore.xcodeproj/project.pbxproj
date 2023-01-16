@@ -17,6 +17,8 @@
 		299B4ED0297561FC00E752DB /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299B4ECF297561FC00E752DB /* SearchVC.swift */; };
 		299B4ED22975623200E752DB /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299B4ED12975623200E752DB /* FavoritesVC.swift */; };
 		299B4ED42975627300E752DB /* NotesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299B4ED32975627300E752DB /* NotesVC.swift */; };
+		299B4ED929758B9000E752DB /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299B4ED829758B9000E752DB /* HomeViewModel.swift */; };
+		299B4EDB29758BF400E752DB /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299B4EDA29758BF400E752DB /* HomeModel.swift */; };
 		51CC44D524FBC6A12F15B455 /* Pods_GameStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD545E90E37A0505B31FAF2E /* Pods_GameStore.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +36,8 @@
 		299B4ECF297561FC00E752DB /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		299B4ED12975623200E752DB /* FavoritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVC.swift; sourceTree = "<group>"; };
 		299B4ED32975627300E752DB /* NotesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesVC.swift; sourceTree = "<group>"; };
+		299B4ED829758B9000E752DB /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		299B4EDA29758BF400E752DB /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		AD545E90E37A0505B31FAF2E /* Pods_GameStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C65F02272F5B5148D7ED5460 /* Pods-GameStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameStore.debug.xcconfig"; path = "Target Support Files/Pods-GameStore/Pods-GameStore.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,7 +130,9 @@
 		299B4EC829755EEC00E752DB /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				299B4EC929755F0A00E752DB /* HomeVC.swift */,
+				299B4ED729758B4600E752DB /* Model */,
+				299B4ED5297587CC00E752DB /* View */,
+				299B4ED629758B3B00E752DB /* View Model */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -164,6 +170,30 @@
 				299B4ED32975627300E752DB /* NotesVC.swift */,
 			);
 			path = Notes;
+			sourceTree = "<group>";
+		};
+		299B4ED5297587CC00E752DB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				299B4EC929755F0A00E752DB /* HomeVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		299B4ED629758B3B00E752DB /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				299B4ED829758B9000E752DB /* HomeViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		299B4ED729758B4600E752DB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				299B4EDA29758BF400E752DB /* HomeModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		540F33691C660D6CC8367580 /* Pods */ = {
@@ -293,6 +323,8 @@
 				299B4EB2297559AC00E752DB /* OnboardVC.swift in Sources */,
 				299B4ED0297561FC00E752DB /* SearchVC.swift in Sources */,
 				299B4ECA29755F0A00E752DB /* HomeVC.swift in Sources */,
+				299B4ED929758B9000E752DB /* HomeViewModel.swift in Sources */,
+				299B4EDB29758BF400E752DB /* HomeModel.swift in Sources */,
 				299B4EAE297559AC00E752DB /* AppDelegate.swift in Sources */,
 				299B4ED22975623200E752DB /* FavoritesVC.swift in Sources */,
 				299B4ED42975627300E752DB /* NotesVC.swift in Sources */,

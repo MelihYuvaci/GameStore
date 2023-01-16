@@ -9,12 +9,15 @@ import UIKit
 
 class HomeVC: UIViewController {
 
+    private let viewModel = HomeViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        viewModel.viewDidLoad()
     }
-    
-
-   
+    private func setupBindings(){
+        
+    }
 }
+
