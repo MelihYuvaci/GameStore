@@ -5,4 +5,6 @@ target 'GameStore' do
 
   # Pods for GameStore
 pod 'paper-onboarding'
+pod 'Kingfisher'
+pod 'Alamofire'
 end
