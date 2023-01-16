@@ -11,6 +11,9 @@ class HomeViewModel{
     
     private var model = HomeModel()
     
+    var onErrorDetected : ((String)-> ())?
+    var refreshItems:(([HomeCellModel])-> ())?
+    
     init() {
         model.delegate = self
     }
@@ -18,6 +21,13 @@ class HomeViewModel{
     func viewDidLoad(){
         model.fetchData()
     }
+    
+    func itemPressed(_ index: Int){
+        
+    }
+    
+    
+    
     
 }
 
