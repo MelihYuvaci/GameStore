@@ -10,7 +10,7 @@ import Kingfisher
 
 class HomeCell: UICollectionViewCell {
 
-    @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet  weak var imageView: UIImageView!
     @IBOutlet private weak var nameTitle: UILabel!
     
     override func awakeFromNib() {
