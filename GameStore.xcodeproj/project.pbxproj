@@ -17,6 +17,13 @@
 		299B4ED0297561FC00E752DB /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299B4ECF297561FC00E752DB /* SearchVC.swift */; };
 		299B4ED22975623200E752DB /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299B4ED12975623200E752DB /* FavoritesVC.swift */; };
 		299B4ED42975627300E752DB /* NotesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299B4ED32975627300E752DB /* NotesVC.swift */; };
+		299B4ED929758B9000E752DB /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299B4ED829758B9000E752DB /* HomeViewModel.swift */; };
+		299B4EDB29758BF400E752DB /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299B4EDA29758BF400E752DB /* HomeModel.swift */; };
+		299B4EDE2975D7B200E752DB /* HomeVCCollectionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299B4EDD2975D7B200E752DB /* HomeVCCollectionHelper.swift */; };
+		299B4EE12975E20500E752DB /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299B4EDF2975E20500E752DB /* HomeCell.swift */; };
+		299B4EE22975E20500E752DB /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 299B4EE02975E20500E752DB /* HomeCell.xib */; };
+		299B4EE42975F62100E752DB /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299B4EE32975F62100E752DB /* GameData.swift */; };
+		29DCA91E2976A52800029F13 /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DCA91D2976A52800029F13 /* PinterestLayout.swift */; };
 		51CC44D524FBC6A12F15B455 /* Pods_GameStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD545E90E37A0505B31FAF2E /* Pods_GameStore.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +41,13 @@
 		299B4ECF297561FC00E752DB /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		299B4ED12975623200E752DB /* FavoritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVC.swift; sourceTree = "<group>"; };
 		299B4ED32975627300E752DB /* NotesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesVC.swift; sourceTree = "<group>"; };
+		299B4ED829758B9000E752DB /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		299B4EDA29758BF400E752DB /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		299B4EDD2975D7B200E752DB /* HomeVCCollectionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVCCollectionHelper.swift; sourceTree = "<group>"; };
+		299B4EDF2975E20500E752DB /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		299B4EE02975E20500E752DB /* HomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
+		299B4EE32975F62100E752DB /* GameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
+		29DCA91D2976A52800029F13 /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
 		AD545E90E37A0505B31FAF2E /* Pods_GameStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C65F02272F5B5148D7ED5460 /* Pods-GameStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameStore.debug.xcconfig"; path = "Target Support Files/Pods-GameStore/Pods-GameStore.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,7 +140,11 @@
 		299B4EC829755EEC00E752DB /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				299B4EC929755F0A00E752DB /* HomeVC.swift */,
+				299B4ED729758B4600E752DB /* Model */,
+				299B4ED5297587CC00E752DB /* View */,
+				299B4ED629758B3B00E752DB /* View Model */,
+				299B4EDC2975D75800E752DB /* Helpers */,
+				29DCA91C2976A50200029F13 /* Layouts */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -164,6 +182,49 @@
 				299B4ED32975627300E752DB /* NotesVC.swift */,
 			);
 			path = Notes;
+			sourceTree = "<group>";
+		};
+		299B4ED5297587CC00E752DB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				299B4EC929755F0A00E752DB /* HomeVC.swift */,
+				299B4EDF2975E20500E752DB /* HomeCell.swift */,
+				299B4EE02975E20500E752DB /* HomeCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		299B4ED629758B3B00E752DB /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				299B4ED829758B9000E752DB /* HomeViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		299B4ED729758B4600E752DB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				299B4EDA29758BF400E752DB /* HomeModel.swift */,
+				299B4EE32975F62100E752DB /* GameData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		299B4EDC2975D75800E752DB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				299B4EDD2975D7B200E752DB /* HomeVCCollectionHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		29DCA91C2976A50200029F13 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				29DCA91D2976A52800029F13 /* PinterestLayout.swift */,
+			);
+			path = Layouts;
 			sourceTree = "<group>";
 		};
 		540F33691C660D6CC8367580 /* Pods */ = {
@@ -237,6 +298,7 @@
 			files = (
 				299B4EBA297559AD00E752DB /* LaunchScreen.storyboard in Resources */,
 				299B4EB7297559AD00E752DB /* Assets.xcassets in Resources */,
+				299B4EE22975E20500E752DB /* HomeCell.xib in Resources */,
 				299B4EB5297559AC00E752DB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,10 +353,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				299B4EB2297559AC00E752DB /* OnboardVC.swift in Sources */,
+				299B4EE42975F62100E752DB /* GameData.swift in Sources */,
 				299B4ED0297561FC00E752DB /* SearchVC.swift in Sources */,
 				299B4ECA29755F0A00E752DB /* HomeVC.swift in Sources */,
+				299B4EE12975E20500E752DB /* HomeCell.swift in Sources */,
+				299B4ED929758B9000E752DB /* HomeViewModel.swift in Sources */,
+				299B4EDB29758BF400E752DB /* HomeModel.swift in Sources */,
 				299B4EAE297559AC00E752DB /* AppDelegate.swift in Sources */,
+				29DCA91E2976A52800029F13 /* PinterestLayout.swift in Sources */,
 				299B4ED22975623200E752DB /* FavoritesVC.swift in Sources */,
+				299B4EDE2975D7B200E752DB /* HomeVCCollectionHelper.swift in Sources */,
 				299B4ED42975627300E752DB /* NotesVC.swift in Sources */,
 				299B4EB0297559AC00E752DB /* SceneDelegate.swift in Sources */,
 			);
