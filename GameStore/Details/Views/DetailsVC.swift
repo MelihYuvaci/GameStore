@@ -19,7 +19,6 @@ class DetailsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupUI()
         setupBinding()
         viewModel.viewDidLoad()
     }
@@ -28,18 +27,16 @@ class DetailsVC: UIViewController {
         //ToDo
     }
     
-    
 }
 
 private extension DetailsVC{
     
-    private func setupUI(){
-        
-    }
-    
-    func setupBinding(){
-        viewModel.refreshItems = {[weak self] items in
-            
+    private func setupBinding(){
+        viewModel.showData = {[weak self] items in
+            self?.imageView.kf.setImage(with: URL.init(string: items.imageUrl))
+            self?.relasedLabel.text = items.relased
+            self?.titleLabel.text = items.title
+            self?.detailsLabel.text = items.details
         }
         
         viewModel.onErrorDetected = {[weak self] message in
@@ -51,3 +48,12 @@ private extension DetailsVC{
     }
 
 }
+
+struct Details {
+    let imageUrl : String
+    let relased : String
+    let title : String
+    let details : String
+}
+
+

@@ -10,7 +10,7 @@ import Foundation
 class DetailsViewModel{
     
     var onErrorDetected : ((String)-> ())?
-    var refreshItems : ((String)-> ())?
+    var showData : ((Details)-> ())?
     
     private let model = DetailsModel()
     
@@ -25,10 +25,11 @@ class DetailsViewModel{
 }
 
 extension DetailsViewModel: DetailsModelDelegate{
-  
-    func didDataFetch() {
-        <#code#>
+    func didDataFetch(data: Details) {
+        showData?(data)
     }
+    
+  
     
     func didFailWithError(error: Error) {
         print(error)
