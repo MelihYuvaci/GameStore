@@ -169,6 +169,40 @@
             </objects>
             <point key="canvasLocation" x="4601" y="304"/>
         </scene>
+        <!--Details-->
+        <scene sceneID="3ju-sR-KGI">
+            <objects>
+                <viewController id="0Yg-f4-aYi" customClass="DetailsVC" customModule="GameStore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c6f-rB-aik">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="acS-pk-3Zc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Details" id="oJc-4q-3fL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lr7-Md-Zq7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6963" y="-35"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3Ok-jN-jOK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tVL-SC-LZU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zMp-7s-wwp">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0Yg-f4-aYi" kind="relationship" relationship="rootViewController" id="rxq-7s-T2L"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kJI-ti-yGV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6008" y="-35"/>
+        </scene>
     </scenes>
     <resources>
         <image name="heart" catalog="system" width="128" height="107"/>
