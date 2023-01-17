@@ -239,8 +239,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Details" id="oJc-4q-3fL">
-                        <barButtonItem key="rightBarButtonItem" image="heart" catalog="system" id="jpu-81-Dum"/>
+                        <barButtonItem key="rightBarButtonItem" image="heart" catalog="system" id="jpu-81-Dum">
+                            <connections>
+                                <action selector="favoriteButtonClicked:" destination="0Yg-f4-aYi" id="SZ4-a4-3df"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="detailsLabel" destination="77F-UX-5s3" id="4jJ-41-Amn"/>
+                        <outlet property="imageView" destination="oa7-y0-WgO" id="bid-2F-iPa"/>
+                        <outlet property="relasedLabel" destination="6Et-IH-IXs" id="ZtN-Uz-GZQ"/>
+                        <outlet property="titleLabel" destination="sbO-pI-Uym" id="5u2-Y6-8kv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lr7-Md-Zq7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

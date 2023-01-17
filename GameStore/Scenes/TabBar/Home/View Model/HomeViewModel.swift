@@ -35,8 +35,10 @@ extension HomeViewModel: HomeModelDelegate{
         refreshItems?(cellModels)
     }
     
-    func didDataCouldntFetch() {
+    func didFailWithError(error: Error) {
+        print(error)
         onErrorDetected?("Please try again later !")
     }
+   
     
 }

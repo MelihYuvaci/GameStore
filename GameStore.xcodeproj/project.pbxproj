@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		299AF93129771AAB0038BB6B /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299AF93029771AAB0038BB6B /* DetailsVC.swift */; };
+		299AF934297726890038BB6B /* DetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299AF933297726890038BB6B /* DetailsModel.swift */; };
+		299AF937297726B70038BB6B /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299AF936297726B70038BB6B /* DetailsViewModel.swift */; };
 		299B4EAE297559AC00E752DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299B4EAD297559AC00E752DB /* AppDelegate.swift */; };
 		299B4EB0297559AC00E752DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299B4EAF297559AC00E752DB /* SceneDelegate.swift */; };
 		299B4EB2297559AC00E752DB /* OnboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299B4EB1297559AC00E752DB /* OnboardVC.swift */; };
@@ -31,6 +33,8 @@
 /* Begin PBXFileReference section */
 		027D058A81494B2534AD9DB4 /* Pods-GameStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameStore.release.xcconfig"; path = "Target Support Files/Pods-GameStore/Pods-GameStore.release.xcconfig"; sourceTree = "<group>"; };
 		299AF93029771AAB0038BB6B /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
+		299AF933297726890038BB6B /* DetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsModel.swift; sourceTree = "<group>"; };
+		299AF936297726B70038BB6B /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		299B4EAA297559AC00E752DB /* GameStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		299B4EAD297559AC00E752DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		299B4EAF297559AC00E752DB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,10 +81,36 @@
 		299AF92F29771A460038BB6B /* Details */ = {
 			isa = PBXGroup;
 			children = (
-				299AF93029771AAB0038BB6B /* DetailsVC.swift */,
+				299AF9352977268F0038BB6B /* Model */,
+				299AF932297726550038BB6B /* Views */,
+				299AF938297726BC0038BB6B /* ViewModel */,
 			);
 			name = Details;
 			path = ../Details;
+			sourceTree = "<group>";
+		};
+		299AF932297726550038BB6B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				299AF93029771AAB0038BB6B /* DetailsVC.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		299AF9352977268F0038BB6B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				299AF933297726890038BB6B /* DetailsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		299AF938297726BC0038BB6B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				299AF936297726B70038BB6B /* DetailsViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		299B4EA1297559AC00E752DB = {
@@ -367,6 +397,7 @@
 				299B4EB2297559AC00E752DB /* OnboardVC.swift in Sources */,
 				299B4EE42975F62100E752DB /* GameData.swift in Sources */,
 				299B4ED0297561FC00E752DB /* SearchVC.swift in Sources */,
+				299AF937297726B70038BB6B /* DetailsViewModel.swift in Sources */,
 				299B4ECA29755F0A00E752DB /* HomeVC.swift in Sources */,
 				299B4EE12975E20500E752DB /* HomeCell.swift in Sources */,
 				299B4ED929758B9000E752DB /* HomeViewModel.swift in Sources */,
@@ -377,6 +408,7 @@
 				299B4EDE2975D7B200E752DB /* HomeVCCollectionHelper.swift in Sources */,
 				299AF93129771AAB0038BB6B /* DetailsVC.swift in Sources */,
 				299B4ED42975627300E752DB /* NotesVC.swift in Sources */,
+				299AF934297726890038BB6B /* DetailsModel.swift in Sources */,
 				299B4EB0297559AC00E752DB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
