@@ -25,7 +25,7 @@ class PinterestLayout: UICollectionViewLayout
     private var contentWidth: CGFloat {
         let insets = collectionView!.contentInset
         return (collectionView!.bounds.width - (insets.left + insets.right))
-    } // There is a very small gap in the moments, we take them out and calculate the width of the collectionview.
+    } 
     
     private var attributesCache = [PinterestLayoutAttributes]()
     
@@ -46,7 +46,6 @@ class PinterestLayout: UICollectionViewLayout
             for item in 0 ..< collectionView!.numberOfItems(inSection: 0) {
                 let indexPath = IndexPath(item: item, section: 0)
                 
-                // calculate the frame
                 let width = columnWidth - cellPadding * 2
                 
                 let photoHeight: CGFloat = (delegate?.collectionView(collectionView: collectionView!, heightForPhotoAt: indexPath, with: width))!
@@ -57,13 +56,11 @@ class PinterestLayout: UICollectionViewLayout
                 let frame = CGRect(x: xOffsets[column], y: yOffsets[column], width: columnWidth, height: height)
                 let insetFrame = frame.insetBy(dx: cellPadding, dy: cellPadding)
                 
-                // create layout attributes
                 let attributes = PinterestLayoutAttributes(forCellWith: indexPath)
                 attributes.photoHeight = photoHeight
                 attributes.frame = insetFrame
                 attributesCache.append(attributes)
                 
-                // update column, yOffset
                 contentHeight = max(contentHeight, frame.maxY)
                 yOffsets[column] = yOffsets[column] + height
                 
