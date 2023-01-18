@@ -39,6 +39,5 @@ extension HomeViewModel: HomeModelDelegate{
         print(error)
         onErrorDetected?("Please try again later !")
     }
-   
     
 }

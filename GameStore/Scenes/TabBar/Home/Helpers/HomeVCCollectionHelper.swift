@@ -15,15 +15,16 @@ class HomeVCCollectionHelper : NSObject {
     
     private var collectionView : UICollectionView?
     private weak var viewModel : HomeViewModel?
+    private weak var navigationController: UINavigationController?
     
     private var items: [RowItem?] = []
-    
-    init(collectionView: UICollectionView, viewModel:HomeViewModel) {
+   
+    init(collectionView: UICollectionView, viewModel:HomeViewModel,navigationController:UINavigationController) {
         self.collectionView = collectionView
         self.viewModel = viewModel
         super.init()
-        
         self.setupCollectionView()
+        self.navigationController = navigationController
     }
     
     private func setupCollectionView(){
@@ -45,6 +46,10 @@ class HomeVCCollectionHelper : NSObject {
 extension HomeVCCollectionHelper : UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         viewModel?.itemPressed(indexPath.row)
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        if let vc = storyBoard.instantiateViewController(withIdentifier: "DetailsVC") as? DetailsVC{
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }
 

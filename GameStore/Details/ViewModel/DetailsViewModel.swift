@@ -29,8 +29,6 @@ extension DetailsViewModel: DetailsModelDelegate{
         showData?(data)
     }
     
-  
-    
     func didFailWithError(error: Error) {
         print(error)
         onErrorDetected?("Please try again later !")

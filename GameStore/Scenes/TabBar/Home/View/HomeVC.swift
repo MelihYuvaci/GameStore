@@ -26,7 +26,7 @@ class HomeVC: UIViewController {
 private extension HomeVC{
     
     private func setupUI(){
-        collectionHelper = .init(collectionView: collectionView, viewModel: viewModel)
+        collectionHelper = .init(collectionView: collectionView, viewModel: viewModel, navigationController:navigationController!)
     }
     
     func setupBindings(){
