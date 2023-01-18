@@ -129,27 +129,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="QUO-Tk-P8n">
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="cd1-bH-C8e">
                                 <rect key="frame" x="0.0" y="59" width="393" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <outlet property="delegate" destination="juA-zm-wmo" id="s4b-jl-XA0"/>
+                                    <outlet property="delegate" destination="juA-zm-wmo" id="GXd-hu-s6o"/>
                                 </connections>
                             </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Y69-us-BDH"/>
                         <color key="backgroundColor" systemColor="systemMintColor"/>
                         <constraints>
-                            <constraint firstItem="QUO-Tk-P8n" firstAttribute="trailing" secondItem="Y69-us-BDH" secondAttribute="trailing" id="AyO-UF-xNj"/>
-                            <constraint firstItem="QUO-Tk-P8n" firstAttribute="top" secondItem="Y69-us-BDH" secondAttribute="top" id="h5H-hG-7DV"/>
-                            <constraint firstItem="QUO-Tk-P8n" firstAttribute="leading" secondItem="Y69-us-BDH" secondAttribute="leading" id="skG-QX-DKE"/>
+                            <constraint firstItem="cd1-bH-C8e" firstAttribute="trailing" secondItem="Y69-us-BDH" secondAttribute="trailing" id="FBd-xm-JGh"/>
+                            <constraint firstItem="cd1-bH-C8e" firstAttribute="leading" secondItem="Y69-us-BDH" secondAttribute="leading" id="YuE-pw-jAU"/>
+                            <constraint firstItem="cd1-bH-C8e" firstAttribute="top" secondItem="Y69-us-BDH" secondAttribute="top" id="oRZ-fN-QeC"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="h0c-qJ-eDT"/>
+                    <connections>
+                        <outlet property="searchBar" destination="cd1-bH-C8e" id="qVj-wj-hPx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iLz-Lq-iFH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4601" y="-368"/>
+            <point key="canvasLocation" x="4600.7633587786258" y="-368.3098591549296"/>
         </scene>
         <!--Notes-->
         <scene sceneID="GuY-iV-K7L">
