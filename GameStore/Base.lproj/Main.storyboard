@@ -124,12 +124,26 @@
         <!--Search-->
         <scene sceneID="AXH-AA-UT3">
             <objects>
-                <viewController id="juA-zm-wmo" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchVC" id="juA-zm-wmo" customClass="SearchVC" customModule="GameStore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mmg-cm-7Sc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="QUO-Tk-P8n">
+                                <rect key="frame" x="0.0" y="59" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="juA-zm-wmo" id="s4b-jl-XA0"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Y69-us-BDH"/>
                         <color key="backgroundColor" systemColor="systemMintColor"/>
+                        <constraints>
+                            <constraint firstItem="QUO-Tk-P8n" firstAttribute="trailing" secondItem="Y69-us-BDH" secondAttribute="trailing" id="AyO-UF-xNj"/>
+                            <constraint firstItem="QUO-Tk-P8n" firstAttribute="top" secondItem="Y69-us-BDH" secondAttribute="top" id="h5H-hG-7DV"/>
+                            <constraint firstItem="QUO-Tk-P8n" firstAttribute="leading" secondItem="Y69-us-BDH" secondAttribute="leading" id="skG-QX-DKE"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="h0c-qJ-eDT"/>
                 </viewController>
@@ -140,7 +154,7 @@
         <!--Notes-->
         <scene sceneID="GuY-iV-K7L">
             <objects>
-                <viewController id="tSr-dv-yNG" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NotesVC" id="tSr-dv-yNG" customClass="NotesVC" customModule="GameStore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NS6-9L-Stk">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -156,7 +170,7 @@
         <!--Favorites-->
         <scene sceneID="qJC-ll-d3q">
             <objects>
-                <viewController id="swL-nu-Gfr" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FavoritesVC" id="swL-nu-Gfr" customClass="FavoritesVC" customModule="GameStore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fbS-gq-zgh">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -285,6 +299,7 @@
         <!--Item-->
         <scene sceneID="ofW-6X-v1a">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uRN-yr-gZr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="66Q-Bf-82Y" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="5Gy-Oj-30T"/>
                     <toolbarItems/>
@@ -297,7 +312,6 @@
                         <segue destination="0Yg-f4-aYi" kind="relationship" relationship="rootViewController" id="m7D-xO-N1T"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uRN-yr-gZr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6962.5954198473282" y="-35.211267605633807"/>
         </scene>
