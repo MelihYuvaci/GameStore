@@ -10,7 +10,7 @@ import Alamofire
 
 protocol HomeModelDelegate : AnyObject{
     func didDataFetch()
-    func didDataCouldntFetch()
+    func didFailWithError(error: Error)
 }
 
 class HomeModel {
@@ -22,7 +22,7 @@ class HomeModel {
     func fetchData(){
         AF.request("https://api.rawg.io/api/games?key=8a73fc08dbb0431b96e9cb965775dc0b").responseDecodable(of:ApiData.self) { res in
             guard let response = res.value else {
-                self.delegate?.didDataCouldntFetch()
+                self.delegate?.didFailWithError(error: res.error!)
                 return
             }
             self.data = response.results ?? []
