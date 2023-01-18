@@ -22,11 +22,9 @@ class DetailsVC: UIViewController {
         setupBinding()
         viewModel.viewDidLoad()
     }
-
+   
     @IBAction func favoriteButtonClicked(_ sender: UIBarButtonItem) {
-        //ToDo
     }
-    
 }
 
 private extension DetailsVC{
