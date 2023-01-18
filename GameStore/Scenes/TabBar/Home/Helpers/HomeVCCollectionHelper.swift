@@ -12,7 +12,6 @@ class HomeVCCollectionHelper : NSObject {
     typealias RowItem = HomeCellModel
     
     private let cellIdentifier = "ReusableHomeCell"
-    
     private var collectionView : UICollectionView?
     private weak var viewModel : HomeViewModel?
     private weak var navigationController: UINavigationController?
@@ -48,6 +47,7 @@ extension HomeVCCollectionHelper : UICollectionViewDelegate{
         viewModel?.itemPressed(indexPath.row)
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         if let vc = storyBoard.instantiateViewController(withIdentifier: "DetailsVC") as? DetailsVC{
+            vc.detailID = items[indexPath.row]?.id
             navigationController?.pushViewController(vc, animated: true)
         }
     }

@@ -31,7 +31,7 @@ class HomeViewModel{
 extension HomeViewModel: HomeModelDelegate{
     
     func didDataFetch() {
-        let cellModels: [HomeCellModel] = model.data.map{.init(imageURL: $0.backgroundImage ?? "", name: $0.name ?? "")}
+        let cellModels: [HomeCellModel] = model.data.map{.init(id: $0.id ?? 0, name: $0.name ?? "", imageURL: $0.backgroundImage ?? "")}
         refreshItems?(cellModels)
     }
     

@@ -8,11 +8,13 @@
 import UIKit
 
 class DetailsVC: UIViewController {
-
+    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var relasedLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var detailsLabel: UILabel!
+    
+    var detailID : Int?
     
     private let viewModel = DetailsViewModel()
     
@@ -20,10 +22,12 @@ class DetailsVC: UIViewController {
         super.viewDidLoad()
         
         setupBinding()
-        viewModel.viewDidLoad()
+        viewModel.viewDidLoad(id: detailID ?? 0)
+        
     }
-   
+    
     @IBAction func favoriteButtonClicked(_ sender: UIBarButtonItem) {
+        //ToDo
     }
 }
 
@@ -41,10 +45,8 @@ private extension DetailsVC{
             let alertController = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
             alertController.addAction(.init(title: "Ok", style: .default))
             self?.present(alertController, animated: true)
-            
         }
     }
-
 }
 
 struct Details {

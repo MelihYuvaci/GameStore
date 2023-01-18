@@ -18,8 +18,8 @@ class DetailsViewModel{
         model.delegate = self
     }
     
-    func viewDidLoad(){
-        model.fetchData()
+    func viewDidLoad(id: Int){
+        model.fetchData(id: id)
     }
     
 }
