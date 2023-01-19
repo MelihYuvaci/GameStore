@@ -39,8 +39,6 @@ class CoreDataManager{
             let result = try persistentContainer.viewContext.fetch(request)
             if result.count > 0 {
                 let item = result.first!
-//                todo.completedTask = true
-//                todo.completedOn = Date()
                 saveContext()
                 completion(true)
             }

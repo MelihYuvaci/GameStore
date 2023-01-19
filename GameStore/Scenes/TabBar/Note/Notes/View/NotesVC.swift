@@ -17,7 +17,8 @@ class NotesVC: UIViewController {
     
 
     @IBAction func addButtonClicked(_ sender: UIBarButtonItem) {
-        print("Ekeleme butonuna basıldı")
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "NewNoteVC") as? NewNoteVC{
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
-    
 }
