@@ -46,7 +46,6 @@ extension SearchVCTableViewHelper : UITableViewDelegate{
             vc.detailID = items[indexPath.row]?.id
             navigationController?.pushViewController(vc, animated: true)
         }
-        
     }
 }
 

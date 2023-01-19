@@ -42,6 +42,7 @@ private extension SearchVC {
         
         viewModel.onErrorDetected = {[weak self] message in
             self?.searchBar.text = ""
+            self?.viewModel.viewDidLoad(searchText: "")
             let alertController = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
             alertController.addAction(.init(title: "Ok", style: .default))
             self?.present(alertController, animated: true)
