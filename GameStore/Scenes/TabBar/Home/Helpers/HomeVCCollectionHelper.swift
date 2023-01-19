@@ -33,7 +33,6 @@ class HomeVCCollectionHelper : NSObject {
         if let layout = collectionView?.collectionViewLayout as? PinterestLayout {
             layout.delegate = self
         }
-
     }
     
     func setItems(_ items: [RowItem]){

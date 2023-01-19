@@ -13,19 +13,24 @@ class SearchVC: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     
     private let viewModel = SearchViewModel()
+    private var tableViewHelper : SearchVCTableViewHelper!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupUI()
         setupBindings()
         searchBar.text = ""
         searchBar.delegate = self
         
     }
-    
 }
 
 private extension SearchVC {
+    
+    private func setupUI(){
+        tableViewHelper = .init(tableView: tableView, viewModel: viewModel, navigationController: navigationController!)
+    }
     
     private func setupBindings(){
         
@@ -50,5 +55,6 @@ extension SearchVC :UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         print(searchText)
     }
+    
 }
 
