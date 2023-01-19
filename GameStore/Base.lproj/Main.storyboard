@@ -171,8 +171,36 @@
                     <view key="view" contentMode="scaleToFill" id="NS6-9L-Stk">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ApF-IJ-1SG">
+                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                                <items>
+                                    <navigationItem id="wY5-MO-Oxc">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="mjz-Ab-RhQ">
+                                            <connections>
+                                                <action selector="addButtonClicked:" destination="tSr-dv-yNG" id="D6L-mz-bTj"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="oPI-z8-CU9">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="NDp-9K-Xmv"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="oPI-z8-CU9" firstAttribute="top" secondItem="ApF-IJ-1SG" secondAttribute="bottom" id="AUm-Zz-xVt"/>
+                            <constraint firstItem="ApF-IJ-1SG" firstAttribute="top" secondItem="NDp-9K-Xmv" secondAttribute="top" id="Jc9-ID-Kev"/>
+                            <constraint firstItem="oPI-z8-CU9" firstAttribute="top" secondItem="ApF-IJ-1SG" secondAttribute="bottom" id="Q23-mb-sJ3"/>
+                            <constraint firstItem="ApF-IJ-1SG" firstAttribute="leading" secondItem="NDp-9K-Xmv" secondAttribute="leading" id="RSS-zY-M4s"/>
+                            <constraint firstItem="NDp-9K-Xmv" firstAttribute="bottom" secondItem="oPI-z8-CU9" secondAttribute="bottom" id="YD4-kb-lmd"/>
+                            <constraint firstItem="NDp-9K-Xmv" firstAttribute="trailing" secondItem="oPI-z8-CU9" secondAttribute="trailing" id="bFq-89-Njj"/>
+                            <constraint firstItem="ApF-IJ-1SG" firstAttribute="trailing" secondItem="NDp-9K-Xmv" secondAttribute="trailing" id="ndx-KW-H8i"/>
+                            <constraint firstItem="oPI-z8-CU9" firstAttribute="leading" secondItem="NDp-9K-Xmv" secondAttribute="leading" id="odi-sh-pnu"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Notes" image="note" catalog="system" selectedImage="note.text" id="sMb-6T-IGR"/>
                 </viewController>
@@ -312,7 +340,6 @@
         <!--Item-->
         <scene sceneID="ofW-6X-v1a">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uRN-yr-gZr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="66Q-Bf-82Y" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="5Gy-Oj-30T"/>
                     <toolbarItems/>
@@ -325,6 +352,7 @@
                         <segue destination="0Yg-f4-aYi" kind="relationship" relationship="rootViewController" id="m7D-xO-N1T"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uRN-yr-gZr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6962.5954198473282" y="-35.211267605633807"/>
         </scene>

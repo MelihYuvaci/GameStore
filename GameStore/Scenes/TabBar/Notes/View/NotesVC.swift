@@ -16,5 +16,8 @@ class NotesVC: UIViewController {
     }
     
 
-
+    @IBAction func addButtonClicked(_ sender: UIBarButtonItem) {
+        print("Ekeleme butonuna basıldı")
+    }
+    
 }
