@@ -16,29 +16,18 @@
                 <rect key="frame" x="0.0" y="0.0" width="380.66666666666669" height="56"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aRR-WW-WIt">
-                        <rect key="frame" x="5" y="8" width="40" height="40"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="40" id="D12-iV-Oet"/>
-                            <constraint firstAttribute="width" constant="40" id="f4m-TF-JLT"/>
-                        </constraints>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aRR-WW-WIt">
+                        <rect key="frame" x="8" y="8" width="40" height="40"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oyun ismi" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lyf-Qj-F8g">
-                        <rect key="frame" x="59" y="8" width="320.66666666666669" height="40"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Oyun ismi" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lyf-Qj-F8g">
+                        <rect key="frame" x="90" y="8" width="282.66666666666669" height="40"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
-                <constraints>
-                    <constraint firstItem="aRR-WW-WIt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="C7M-mX-U8q"/>
-                    <constraint firstAttribute="bottom" secondItem="aRR-WW-WIt" secondAttribute="bottom" constant="8" id="MYt-qH-VUe"/>
-                    <constraint firstAttribute="bottom" secondItem="Lyf-Qj-F8g" secondAttribute="bottom" constant="8" id="St5-VZ-fwc"/>
-                    <constraint firstItem="aRR-WW-WIt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="T5Y-HD-BZR"/>
-                    <constraint firstItem="Lyf-Qj-F8g" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="bLw-Au-LLs"/>
-                    <constraint firstAttribute="trailing" secondItem="Lyf-Qj-F8g" secondAttribute="trailing" constant="1" id="q3u-zz-313"/>
-                    <constraint firstItem="Lyf-Qj-F8g" firstAttribute="leading" secondItem="aRR-WW-WIt" secondAttribute="trailing" constant="14" id="rQa-Ck-zyF"/>
-                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
