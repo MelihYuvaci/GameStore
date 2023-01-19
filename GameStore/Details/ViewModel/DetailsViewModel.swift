@@ -25,6 +25,7 @@ class DetailsViewModel{
 }
 
 extension DetailsViewModel: DetailsModelDelegate{
+    
     func didDataFetch(data: Details) {
         showData?(data)
     }

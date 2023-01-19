@@ -20,32 +20,33 @@ class OnboardVC: UIViewController {
         
     }
     /// Configure Onboarding View
-       
-       private func setupPaperOnboardingView() {
-           let onboarding = PaperOnboarding()
-           onboarding.delegate = self
-           onboarding.dataSource = self
-           onboarding.translatesAutoresizingMaskIntoConstraints = false
-           view.addSubview(onboarding)
-           
-           // Add constraints
-           for attribute: NSLayoutConstraint.Attribute in [.left, .right, .top, .bottom] {
-               let constraint = NSLayoutConstraint(item: onboarding,
-                                                   attribute: attribute,
-                                                   relatedBy: .equal,
-                                                   toItem: view,
-                                                   attribute: attribute,
-                                                   multiplier: 1,
-                                                   constant: 0)
-               view.addConstraint(constraint)
-           }
-       }
+    
+    private func setupPaperOnboardingView() {
+        let onboarding = PaperOnboarding()
+        onboarding.delegate = self
+        onboarding.dataSource = self
+        onboarding.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(onboarding)
+        
+        // Add constraints
+        for attribute: NSLayoutConstraint.Attribute in [.left, .right, .top, .bottom] {
+            let constraint = NSLayoutConstraint(item: onboarding,
+                                                attribute: attribute,
+                                                relatedBy: .equal,
+                                                toItem: view,
+                                                attribute: attribute,
+                                                multiplier: 1,
+                                                constant: 0)
+            view.addConstraint(constraint)
+        }
+    }
     
     
     @IBAction func skipButtonClicked(_ sender: UIButton) {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "Tabbar") as? UITabBarController {
-                    navigationController?.pushViewController(vc, animated: true)
-            }
+            vc.navigationItem.hidesBackButton = true
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }
 
