@@ -19,10 +19,12 @@ class SearchVC: UIViewController {
         super.viewDidLoad()
         
         setupUI()
-        setupBindings()
-        searchBar.text = ""
         searchBar.delegate = self
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        searchBar.text = ""
+        viewModel.viewDidLoad(searchText: "")
     }
 }
 
@@ -35,10 +37,11 @@ private extension SearchVC {
     private func setupBindings(){
         
         viewModel.showData = {[weak self] items in
-            
+            self?.tableViewHelper.setItems(items)
         }
         
         viewModel.onErrorDetected = {[weak self] message in
+            self?.searchBar.text = ""
             let alertController = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
             alertController.addAction(.init(title: "Ok", style: .default))
             self?.present(alertController, animated: true)
@@ -46,15 +49,15 @@ private extension SearchVC {
     }
 }
 
+
+
 extension SearchVC :UISearchBarDelegate{
     
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        print(searchBar.text)
-    }
-    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print(searchText)
+        setupBindings()
+        viewModel.viewDidLoad(searchText: searchText)
     }
-    
 }
+
+
 

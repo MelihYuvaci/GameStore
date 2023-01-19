@@ -19,9 +19,10 @@ class SearchVCTableViewHelper: NSObject {
     private var items : [RowItem?] = []
     
     init(tableView: UITableView, viewModel: SearchViewModel, navigationController: UINavigationController) {
-        super.init()
         self.tableView = tableView
         self.viewModel = viewModel
+        super.init()
+        self.setupTableView()
         self.navigationController = navigationController
     }
     

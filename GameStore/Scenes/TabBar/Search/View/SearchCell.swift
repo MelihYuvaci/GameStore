@@ -6,9 +6,14 @@
 //
 
 import UIKit
+import Kingfisher
 
 class SearchCell: UITableViewCell {
 
+    @IBOutlet weak var gameImage: UIImageView!
+    @IBOutlet weak var gameTitle: UILabel!
+    var id: Int?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,7 +26,11 @@ class SearchCell: UITableViewCell {
     }
     
     func configure(with model: SearchCellModel){
-        
+        DispatchQueue.main.async {
+            self.id = model.id
+            self.gameTitle.text = model.name
+            self.imageView?.kf.setImage(with: URL.init(string: model.imageURL))
+        }
     }
 }
 

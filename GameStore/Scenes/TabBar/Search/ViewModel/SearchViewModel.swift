@@ -9,7 +9,7 @@ import Foundation
 
 class SearchViewModel{
     
-    var showData : ((String)-> ())?
+    var showData : (([SearchCellModel])-> ())?
     var onErrorDetected : ((String)-> ())?
     
     private let model = SearchModel()
@@ -27,7 +27,8 @@ class SearchViewModel{
 extension SearchViewModel: SearchModelDelegate{
     
     func didDataFetch() {
-        showData?("Data")
+        let cellModels: [SearchCellModel] = model.data.map{.init(id: $0.id ?? 0, name: $0.name ?? "", imageURL: $0.backgroundImage ?? "")}
+        showData?(cellModels)
     }
     
     func didFailWithError(error: Error) {
