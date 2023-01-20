@@ -1,5 +1,5 @@
 //
-//  NotesModel.swift
+//  NotesVCTableViewHelper.swift
 //  GameStore
 //
 //  Created by Melih Yuvacı on 20.01.2023.
@@ -7,6 +7,7 @@
 
 import Foundation
 
-class NotesModel {
+class NotesVCTableViewHelper{
     
+
 }

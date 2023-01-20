@@ -9,11 +9,12 @@ import Foundation
 import CoreData
 
 class CoreDataManager{
+    
     static let shared = CoreDataManager()
     
     private init (){}
     
-    func deleteTask(item : Notes, completion: @escaping (Bool) -> Void) {
+    func deleteNotes(item : Notes, completion: @escaping (Bool) -> Void) {
         let request: NSFetchRequest<Notes> = Notes.fetchRequest()
         request.predicate = NSPredicate(format: "id = %@", item.id!.uuidString)
         
@@ -31,23 +32,8 @@ class CoreDataManager{
         }
     }
     
-    func completeTask(item : Notes, completion: @escaping (Bool) -> Void) {
-        let request: NSFetchRequest<Notes> = Notes.fetchRequest()
-        request.predicate = NSPredicate(format: "id = %@", item.id!.uuidString)
-        
-        do {
-            let result = try persistentContainer.viewContext.fetch(request)
-            if result.count > 0 {
-                let item = result.first!
-                saveContext()
-                completion(true)
-            }
-        } catch let err {
-            print(err.localizedDescription)
-        }
-    }
     
-    func getAllTodos () -> [Notes] {
+    func getAllNotes () -> [Notes] {
         let request: NSFetchRequest<Notes> = Notes.fetchRequest()
         let firstSort = NSSortDescriptor(key: #keyPath(Notes.name), ascending: true)
         let secondSort = NSSortDescriptor(key: #keyPath(Notes.comment), ascending: false)
@@ -63,7 +49,7 @@ class CoreDataManager{
         return items
     }
     
-    func saveToDo(name: String, comment: String, completion: @escaping (Bool) -> Void) {
+    func saveNotes(name: String, comment: String, completion: @escaping (Bool) -> Void) {
         let items = Notes(context: persistentContainer.viewContext)
         items.id = UUID()
         items.name = name

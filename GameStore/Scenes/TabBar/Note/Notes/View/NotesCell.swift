@@ -12,6 +12,14 @@ class NotesCell: UITableViewCell {
     @IBOutlet weak var gameNameLabel: UILabel!
     @IBOutlet weak var gameCommentLabel: UILabel!
     
+    var notes: Notes?{
+        didSet{
+            if let note = notes {
+                gameNameLabel.text = note.name!
+                gameCommentLabel.text = note.comment!
+            }
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

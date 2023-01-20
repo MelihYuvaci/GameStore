@@ -35,5 +35,4 @@ extension DetailsViewModel: DetailsModelDelegate{
         onErrorDetected?("Please try again later !")
     }
     
-    
 }
