@@ -40,7 +40,6 @@
 		299B4EE12975E20500E752DB /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299B4EDF2975E20500E752DB /* HomeCell.swift */; };
 		299B4EE22975E20500E752DB /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 299B4EE02975E20500E752DB /* HomeCell.xib */; };
 		299B4EE42975F62100E752DB /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299B4EE32975F62100E752DB /* GameData.swift */; };
-		29AD2BEF297A7BB8007B0AAA /* NotesVCTableViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AD2BEE297A7BB8007B0AAA /* NotesVCTableViewHelper.swift */; };
 		29DCA91E2976A52800029F13 /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DCA91D2976A52800029F13 /* PinterestLayout.swift */; };
 		51CC44D524FBC6A12F15B455 /* Pods_GameStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD545E90E37A0505B31FAF2E /* Pods_GameStore.framework */; };
 /* End PBXBuildFile section */
@@ -82,7 +81,6 @@
 		299B4EDF2975E20500E752DB /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		299B4EE02975E20500E752DB /* HomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
 		299B4EE32975F62100E752DB /* GameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
-		29AD2BEE297A7BB8007B0AAA /* NotesVCTableViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesVCTableViewHelper.swift; sourceTree = "<group>"; };
 		29DCA91D2976A52800029F13 /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
 		AD545E90E37A0505B31FAF2E /* Pods_GameStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C65F02272F5B5148D7ED5460 /* Pods-GameStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameStore.debug.xcconfig"; path = "Target Support Files/Pods-GameStore/Pods-GameStore.debug.xcconfig"; sourceTree = "<group>"; };
@@ -155,7 +153,6 @@
 			children = (
 				299AC06E2979EE8800B87F31 /* View */,
 				299AC06F2979EEAB00B87F31 /* ViewModel */,
-				29AD2BED297A7B66007B0AAA /* Helpers */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -401,14 +398,6 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		29AD2BED297A7B66007B0AAA /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				29AD2BEE297A7BB8007B0AAA /* NotesVCTableViewHelper.swift */,
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
 		29DCA91C2976A50200029F13 /* Layouts */ = {
 			isa = PBXGroup;
 			children = (
@@ -568,7 +557,6 @@
 				299AC07F2979F5F500B87F31 /* CoreDataManager.swift in Sources */,
 				299AC0742979EEFF00B87F31 /* NotesViewModel.swift in Sources */,
 				299AC07A2979F4FA00B87F31 /* DataModel.xcdatamodeld in Sources */,
-				29AD2BEF297A7BB8007B0AAA /* NotesVCTableViewHelper.swift in Sources */,
 				299B4ED42975627300E752DB /* NotesVC.swift in Sources */,
 				299AF934297726890038BB6B /* DetailsModel.swift in Sources */,
 				299AC0892979FE2E00B87F31 /* NewNoteViewModel.swift in Sources */,

@@ -16,10 +16,8 @@ class NotesVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
-
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(UINib(nibName: "NotesCell", bundle: nil), forCellReuseIdentifier: "ReusableNotesCell")
+        
+        setupTableView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,7 +35,21 @@ class NotesVC: UIViewController {
             navigationController?.pushViewController(vc, animated: true)
         }
     }
+}
+
+private extension  NotesVC{
+    private func setupTableView(){
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UINib(nibName: "NotesCell", bundle: nil), forCellReuseIdentifier: "ReusableNotesCell")
+    }
     
+}
+
+extension NotesVC : UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
 
 
@@ -50,13 +62,6 @@ extension NotesVC : UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReusableNotesCell", for: indexPath) as! NotesCell
         cell.notes = viewModel.notesAtIndex(indexPath.row)
         return cell
-    }
-    
-}
-
-extension NotesVC : UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -72,5 +77,7 @@ extension NotesVC : UITableViewDelegate {
         }
     }
 }
+
+
 
 
