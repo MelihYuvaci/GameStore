@@ -11,6 +11,8 @@
 		2935EC2D29793403008DCB51 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2935EC2B29793403008DCB51 /* SearchCell.swift */; };
 		2935EC2E29793403008DCB51 /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2935EC2C29793403008DCB51 /* SearchCell.xib */; };
 		2935EC3029794C48008DCB51 /* SearchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2935EC2F29794C48008DCB51 /* SearchData.swift */; };
+		2980DBFD297A61D900D099AB /* NotesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2980DBFB297A61D900D099AB /* NotesCell.swift */; };
+		2980DBFE297A61D900D099AB /* NotesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2980DBFC297A61D900D099AB /* NotesCell.xib */; };
 		299AC0722979EEE800B87F31 /* NotesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299AC0712979EEE800B87F31 /* NotesModel.swift */; };
 		299AC0742979EEFF00B87F31 /* NotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299AC0732979EEFF00B87F31 /* NotesViewModel.swift */; };
 		299AC07A2979F4FA00B87F31 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 299AC0782979F4FA00B87F31 /* DataModel.xcdatamodeld */; };
@@ -50,6 +52,8 @@
 		2935EC2B29793403008DCB51 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		2935EC2C29793403008DCB51 /* SearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
 		2935EC2F29794C48008DCB51 /* SearchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchData.swift; sourceTree = "<group>"; };
+		2980DBFB297A61D900D099AB /* NotesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesCell.swift; sourceTree = "<group>"; };
+		2980DBFC297A61D900D099AB /* NotesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotesCell.xib; sourceTree = "<group>"; };
 		299AC0712979EEE800B87F31 /* NotesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesModel.swift; sourceTree = "<group>"; };
 		299AC0732979EEFF00B87F31 /* NotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewModel.swift; sourceTree = "<group>"; };
 		299AC0792979F4FA00B87F31 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
@@ -118,6 +122,8 @@
 			isa = PBXGroup;
 			children = (
 				299B4ED32975627300E752DB /* NotesVC.swift */,
+				2980DBFB297A61D900D099AB /* NotesCell.swift */,
+				2980DBFC297A61D900D099AB /* NotesCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -205,8 +211,7 @@
 				299AF932297726550038BB6B /* Views */,
 				299AF938297726BC0038BB6B /* ViewModel */,
 			);
-			name = Details;
-			path = ../Details;
+			path = Details;
 			sourceTree = "<group>";
 		};
 		299AF932297726550038BB6B /* Views */ = {
@@ -306,6 +311,7 @@
 				299B4EC729755D0900E752DB /* Onboard */,
 				299B4ECB2975614E00E752DB /* TabBar */,
 				299AF92F29771A460038BB6B /* Details */,
+				299B4ECE297561C900E752DB /* Note */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -345,7 +351,6 @@
 				299B4EC829755EEC00E752DB /* Home */,
 				299B4ECC297561AC00E752DB /* Search */,
 				299B4ECD297561B800E752DB /* Favorites */,
-				299B4ECE297561C900E752DB /* Note */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -497,6 +502,7 @@
 				299B4EB7297559AD00E752DB /* Assets.xcassets in Resources */,
 				299B4EE22975E20500E752DB /* HomeCell.xib in Resources */,
 				299B4EB5297559AC00E752DB /* Main.storyboard in Resources */,
+				2980DBFE297A61D900D099AB /* NotesCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,6 +570,7 @@
 				299B4EE12975E20500E752DB /* HomeCell.swift in Sources */,
 				2935EC2D29793403008DCB51 /* SearchCell.swift in Sources */,
 				299B4ED929758B9000E752DB /* HomeViewModel.swift in Sources */,
+				2980DBFD297A61D900D099AB /* NotesCell.swift in Sources */,
 				299B4EDB29758BF400E752DB /* HomeModel.swift in Sources */,
 				299B4EAE297559AC00E752DB /* AppDelegate.swift in Sources */,
 				29DCA91E2976A52800029F13 /* PinterestLayout.swift in Sources */,
