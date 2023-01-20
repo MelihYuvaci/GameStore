@@ -21,7 +21,7 @@ class DetailsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupBinding()
+        setupBindings()
         viewModel.viewDidLoad(id: detailID ?? 0)
         
     }
@@ -33,7 +33,7 @@ class DetailsVC: UIViewController {
 
 private extension DetailsVC{
     
-    private func setupBinding(){
+    private func setupBindings(){
         viewModel.showData = {[weak self] items in
             self?.imageView.kf.setImage(with: URL.init(string: items.imageUrl))
             self?.relasedLabel.text = items.relased

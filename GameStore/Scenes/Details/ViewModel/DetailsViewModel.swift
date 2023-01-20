@@ -25,6 +25,7 @@ class DetailsViewModel{
 }
 
 extension DetailsViewModel: DetailsModelDelegate{
+    
     func didDataFetch(data: Details) {
         showData?(data)
     }
@@ -33,6 +34,5 @@ extension DetailsViewModel: DetailsModelDelegate{
         print(error)
         onErrorDetected?("Please try again later !")
     }
-    
     
 }

@@ -24,6 +24,7 @@ class HomeCell: UICollectionViewCell {
         nameTitle.text = model.name
         imageView.kf.setImage(with: URL.init(string: model.imageURL))
     }
+    
 }
 
 struct HomeCellModel{
