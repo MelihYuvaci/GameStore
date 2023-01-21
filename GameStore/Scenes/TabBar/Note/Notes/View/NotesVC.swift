@@ -43,7 +43,6 @@ extension  NotesVC{
         tableView.dataSource = self
         tableView.register(UINib(nibName: "NotesCell", bundle: nil), forCellReuseIdentifier: "ReusableNotesCell")
     }
-    
 }
 
 extension NotesVC : UITableViewDelegate {
