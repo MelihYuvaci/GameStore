@@ -1,37 +1,18 @@
 //
-//  CoreDataManager.swift
+//  NoteCoreDataManager.swift
 //  GameStore
 //
-//  Created by Melih Yuvacı on 20.01.2023.
+//  Created by Melih Yuvacı on 21.01.2023.
 //
 
 import Foundation
 import CoreData
 
-class CoreDataManager{
+class NoteCoreDataManager {
     
-    static let shared = CoreDataManager()
+    static let shared = NoteCoreDataManager()
     
     private init (){}
-    
-    func deleteNotes(item : Notes, completion: @escaping (Bool) -> Void) {
-        let request: NSFetchRequest<Notes> = Notes.fetchRequest()
-        request.predicate = NSPredicate(format: "id = %@", item.id!.uuidString)
-        
-        do {
-            let context = persistentContainer.viewContext
-            let result = try context.fetch(request)
-            if result.count > 0 {
-                let item = result.first!
-                context.delete(item)
-                saveContext()
-                completion(true)
-            }
-        } catch let err {
-            print(err.localizedDescription)
-        }
-    }
-    
     
     func getAllNotes () -> [Notes] {
         let request: NSFetchRequest<Notes> = Notes.fetchRequest()
@@ -57,6 +38,25 @@ class CoreDataManager{
         saveContext()
         completion(true)
     }
+    
+    func deleteNotes(item : Notes, completion: @escaping (Bool) -> Void) {
+        let request: NSFetchRequest<Notes> = Notes.fetchRequest()
+        request.predicate = NSPredicate(format: "id = %@", item.id!.uuidString)
+        
+        do {
+            let context = persistentContainer.viewContext
+            let result = try context.fetch(request)
+            if result.count > 0 {
+                let item = result.first!
+                context.delete(item)
+                saveContext()
+                completion(true)
+            }
+        } catch let err {
+            print(err.localizedDescription)
+        }
+    }
+
     
     //MARK: - Core Data stack
     

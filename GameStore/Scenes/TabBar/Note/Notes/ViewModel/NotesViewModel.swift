@@ -26,11 +26,11 @@ class NotesViewModel {
     
     
     func refreshData (){
-        notes = CoreDataManager.shared.getAllNotes()
+        notes = NoteCoreDataManager.shared.getAllNotes()
     }
     
     func deleteItem (_ index: Int, completion: @escaping (Bool) -> Void){
-        CoreDataManager.shared.deleteNotes(item: notes[index]) { _ in
+        NoteCoreDataManager.shared.deleteNotes(item: notes[index]) { _ in
             self.refreshData()
             completion(true)
         }

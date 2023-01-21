@@ -294,14 +294,38 @@
                     <view key="view" contentMode="scaleToFill" id="fbS-gq-zgh">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="L1K-4C-K0G">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qif-AV-H1x">
+                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                                <items>
+                                    <navigationItem title="Favorites" id="f2S-aj-PVW"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="cHh-zs-NNM"/>
                         <color key="backgroundColor" systemColor="systemPinkColor"/>
+                        <constraints>
+                            <constraint firstItem="qif-AV-H1x" firstAttribute="top" secondItem="cHh-zs-NNM" secondAttribute="top" id="4qe-Pr-GXB"/>
+                            <constraint firstItem="L1K-4C-K0G" firstAttribute="trailing" secondItem="cHh-zs-NNM" secondAttribute="trailing" id="K8t-RK-Lrz"/>
+                            <constraint firstItem="L1K-4C-K0G" firstAttribute="bottom" secondItem="cHh-zs-NNM" secondAttribute="bottom" id="S12-M1-4jS"/>
+                            <constraint firstItem="L1K-4C-K0G" firstAttribute="leading" secondItem="cHh-zs-NNM" secondAttribute="leading" id="Ulr-o9-ynW"/>
+                            <constraint firstItem="qif-AV-H1x" firstAttribute="trailing" secondItem="cHh-zs-NNM" secondAttribute="trailing" id="Yna-db-dOZ"/>
+                            <constraint firstItem="qif-AV-H1x" firstAttribute="leading" secondItem="cHh-zs-NNM" secondAttribute="leading" id="hah-a8-QpU"/>
+                            <constraint firstItem="L1K-4C-K0G" firstAttribute="top" secondItem="qif-AV-H1x" secondAttribute="bottom" id="qjb-y7-0Oy"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Favorites" image="heart" catalog="system" selectedImage="heart.fill" id="SMg-26-fEF"/>
+                    <connections>
+                        <outlet property="tableView" destination="L1K-4C-K0G" id="4ea-Hb-3wk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ws2-dP-ZN4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4601" y="304"/>
+            <point key="canvasLocation" x="4600.7633587786258" y="303.52112676056339"/>
         </scene>
         <!--Details-->
         <scene sceneID="3ju-sR-KGI">

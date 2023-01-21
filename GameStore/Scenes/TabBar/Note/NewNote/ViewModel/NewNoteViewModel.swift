@@ -18,7 +18,7 @@ class NewNoteViewModel{
     }
     
     func saveTask(completion: @escaping (Bool)-> Void){
-        CoreDataManager.shared.saveNotes(name: self.name, comment: self.comment, completion: completion)
+        NoteCoreDataManager.shared.saveNotes(name: self.name, comment: self.comment, completion: completion)
     }
     
 }
