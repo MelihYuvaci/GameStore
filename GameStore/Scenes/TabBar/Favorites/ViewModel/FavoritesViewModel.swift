@@ -24,15 +24,13 @@ class FavoritesViewModel {
     }
     
     func refreshData(){
-        favorites = CoreDataManager.shared.getAllFavorites()
+        favorites = FavoriteCoreDataManager.shared.getAllFavorites()
     }
     
     func deleteItem (_ index: Int, completion: @escaping (Bool) -> Void){
-        CoreDataManager.shared.deleteFavorites(item: favorites[index], completion: { _ in
+        FavoriteCoreDataManager.shared.deleteFavorites(item: favorites[index], completion: { _ in
             self.refreshData()
             completion(true)
         })
     }
-    
-    
 }

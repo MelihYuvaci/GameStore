@@ -29,7 +29,7 @@ class DetailsViewModel{
     }
     
     func saveFavorites(completion: @escaping (Bool)-> Void){
-        CoreDataManager.shared.saveFavorites(name: self.name!, favorite: self.favorite!, completion: completion)
+        FavoriteCoreDataManager.shared.saveFavorites(name: self.name!, favorite: self.favorite!, completion: completion)
     }
     
 }
