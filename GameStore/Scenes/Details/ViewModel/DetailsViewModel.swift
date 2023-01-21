@@ -9,17 +9,27 @@ import Foundation
 
 class DetailsViewModel{
     
+    let favorite : Bool?
+    let name : String?
+   
+    init(favorite: Bool?, name: String?) {
+        self.favorite = favorite
+        self.name = name
+        
+        model.delegate = self
+    }
+    
     var onErrorDetected : ((String)-> ())?
     var showData : ((Details)-> ())?
     
     private let model = DetailsModel()
     
-    init() {
-        model.delegate = self
-    }
-    
     func viewDidLoad(id: Int){
         model.fetchData(id: id)
+    }
+    
+    func saveFavorites(completion: @escaping (Bool)-> Void){
+        CoreDataManager.shared.saveFavorites(name: self.name!, favorite: self.favorite!, completion: completion)
     }
     
 }

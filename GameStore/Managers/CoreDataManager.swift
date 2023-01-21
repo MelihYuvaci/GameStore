@@ -33,6 +33,25 @@ class CoreDataManager{
     }
     
     
+    func deleteFavorites(item : Favorites, completion: @escaping (Bool) -> Void) {
+        let request: NSFetchRequest<Favorites> = Favorites.fetchRequest()
+        request.predicate = NSPredicate(format: "id = %@",item.id!.uuidString)
+        
+        do {
+            let context = persistentContainer.viewContext
+            let result = try context.fetch(request)
+            if result.count > 0 {
+                let item = result.first!
+                context.delete(item)
+                saveContext()
+                completion(true)
+            }
+        } catch let err {
+            print(err.localizedDescription)
+        }
+    }
+    
+    
     func getAllNotes () -> [Notes] {
         let request: NSFetchRequest<Notes> = Notes.fetchRequest()
         let firstSort = NSSortDescriptor(key: #keyPath(Notes.name), ascending: true)
@@ -49,11 +68,34 @@ class CoreDataManager{
         return items
     }
     
+    func getAllFavorites () -> [Favorites] {
+        let request: NSFetchRequest<Favorites> = Favorites.fetchRequest()
+        let secondSort = NSSortDescriptor(key: #keyPath(Favorites.name), ascending: false)
+        request.sortDescriptors = [secondSort]
+        var items = [Favorites]()
+        do {
+            items = try persistentContainer.viewContext.fetch(request)
+        } catch let err {
+            print(err.localizedDescription)
+        }
+        
+        return items
+    }
+    
     func saveNotes(name: String, comment: String, completion: @escaping (Bool) -> Void) {
         let items = Notes(context: persistentContainer.viewContext)
         items.id = UUID()
         items.name = name
         items.comment = comment
+        saveContext()
+        completion(true)
+    }
+    
+    func saveFavorites(name: String, favorite: Bool,  completion: @escaping (Bool) -> Void) {
+        let items = Favorites(context: persistentContainer.viewContext)
+        items.id = UUID()
+        items.name = name
+        items.favorited = favorite
         saveContext()
         completion(true)
     }

@@ -15,8 +15,8 @@ class DetailsVC: UIViewController {
     @IBOutlet weak var detailsLabel: UILabel!
     
     var detailID : Int?
-    
-    private let viewModel = DetailsViewModel()
+    var favoriteValue : Bool = false
+    private let viewModel = DetailsViewModel(favorite: nil, name: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +27,21 @@ class DetailsVC: UIViewController {
     }
     
     @IBAction func favoriteButtonClicked(_ sender: UIBarButtonItem) {
-        //ToDo
+        if titleLabel.text != "" && detailID != nil  {
+
+            if favoriteValue == false {
+                favoriteValue = true
+            }
+            
+            let viewModel = DetailsViewModel(favorite: favoriteValue, name: titleLabel.text ?? "No Text")
+            if favoriteValue == true {
+                viewModel.saveFavorites { _ in
+                    let alertController = UIAlertController(title: "Information", message: "Favorilere Eklenildi", preferredStyle: .alert)
+                    alertController.addAction(.init(title: "Ok", style: .default))
+                    self.present(alertController, animated: true)
+                }
+            }
+        }
     }
 }
 

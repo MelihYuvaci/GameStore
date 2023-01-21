@@ -11,6 +11,13 @@ class FavoriteCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     
+    var favorites : Favorites?{
+        didSet {
+            if let favorite = favorites{
+                titleLabel.text = favorite.name!
+            }
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -37,7 +37,7 @@ class NotesVC: UIViewController {
     }
 }
 
-private extension  NotesVC{
+extension  NotesVC{
     private func setupTableView(){
         tableView.delegate = self
         tableView.dataSource = self
