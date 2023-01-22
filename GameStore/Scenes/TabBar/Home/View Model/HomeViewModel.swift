@@ -18,8 +18,8 @@ class HomeViewModel{
         model.delegate = self
     }
     
-    func viewDidLoad(){
-        model.fetchData()
+    func viewDidLoad(filterText: String){
+        model.fetchData(filter: filterText)
     }
     
     func itemPressed(_ index: Int){

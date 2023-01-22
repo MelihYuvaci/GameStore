@@ -37,13 +37,12 @@ class NotesVC: UIViewController {
     }
 }
 
-private extension  NotesVC{
+extension  NotesVC{
     private func setupTableView(){
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "NotesCell", bundle: nil), forCellReuseIdentifier: "ReusableNotesCell")
     }
-    
 }
 
 extension NotesVC : UITableViewDelegate {
