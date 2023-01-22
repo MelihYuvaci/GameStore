@@ -13,6 +13,7 @@
 		2935EC3029794C48008DCB51 /* SearchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2935EC2F29794C48008DCB51 /* SearchData.swift */; };
 		2980DBFD297A61D900D099AB /* NotesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2980DBFB297A61D900D099AB /* NotesCell.swift */; };
 		2980DBFE297A61D900D099AB /* NotesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2980DBFC297A61D900D099AB /* NotesCell.xib */; };
+		298C29EB297D715500DA6454 /* HomeVCPickerViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298C29EA297D715500DA6454 /* HomeVCPickerViewHelper.swift */; };
 		299AC0742979EEFF00B87F31 /* NotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299AC0732979EEFF00B87F31 /* NotesViewModel.swift */; };
 		299AC07A2979F4FA00B87F31 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 299AC0782979F4FA00B87F31 /* DataModel.xcdatamodeld */; };
 		299AC0832979FDE600B87F31 /* NewNoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299AC0822979FDE600B87F31 /* NewNoteVC.swift */; };
@@ -56,6 +57,7 @@
 		2935EC2F29794C48008DCB51 /* SearchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchData.swift; sourceTree = "<group>"; };
 		2980DBFB297A61D900D099AB /* NotesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesCell.swift; sourceTree = "<group>"; };
 		2980DBFC297A61D900D099AB /* NotesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotesCell.xib; sourceTree = "<group>"; };
+		298C29EA297D715500DA6454 /* HomeVCPickerViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVCPickerViewHelper.swift; sourceTree = "<group>"; };
 		299AC0732979EEFF00B87F31 /* NotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewModel.swift; sourceTree = "<group>"; };
 		299AC0792979F4FA00B87F31 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		299AC0822979FDE600B87F31 /* NewNoteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNoteVC.swift; sourceTree = "<group>"; };
@@ -396,6 +398,7 @@
 			isa = PBXGroup;
 			children = (
 				299B4EDD2975D7B200E752DB /* HomeVCCollectionHelper.swift */,
+				298C29EA297D715500DA6454 /* HomeVCPickerViewHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -588,6 +591,7 @@
 				2935EC2D29793403008DCB51 /* SearchCell.swift in Sources */,
 				299B4ED929758B9000E752DB /* HomeViewModel.swift in Sources */,
 				2980DBFD297A61D900D099AB /* NotesCell.swift in Sources */,
+				298C29EB297D715500DA6454 /* HomeVCPickerViewHelper.swift in Sources */,
 				299B4EDB29758BF400E752DB /* HomeModel.swift in Sources */,
 				299B4EAE297559AC00E752DB /* AppDelegate.swift in Sources */,
 				29DCA91E2976A52800029F13 /* PinterestLayout.swift in Sources */,

@@ -49,7 +49,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Xdp-Rg-0em">
-                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewLayout key="collectionViewLayout" id="Ghq-OB-xzh" customClass="PinterestLayout" customModule="GameStore" customModuleProvider="target"/>
                                 <cells>
@@ -63,24 +63,46 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mbM-DW-gJB">
+                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                                <items>
+                                    <navigationItem title="Home" id="wLb-lb-hg1">
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="9Vn-2h-6Q8">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="GIg-mr-v42">
+                                                <rect key="frame" x="327" y="4.6666666666666679" width="50" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="chevron.down.circle.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="popUpPicker:" destination="WBX-zI-XkX" eventType="touchUpInside" id="gAt-XK-cI8"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Uvq-8x-r6A"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
                         <constraints>
-                            <constraint firstItem="Xdp-Rg-0em" firstAttribute="top" secondItem="Uvq-8x-r6A" secondAttribute="top" id="7Dx-ci-7Tq"/>
-                            <constraint firstItem="Uvq-8x-r6A" firstAttribute="trailing" secondItem="Xdp-Rg-0em" secondAttribute="trailing" id="N64-xk-YET"/>
-                            <constraint firstItem="Uvq-8x-r6A" firstAttribute="bottom" secondItem="Xdp-Rg-0em" secondAttribute="bottom" id="mtv-yq-eBv"/>
-                            <constraint firstItem="Xdp-Rg-0em" firstAttribute="leading" secondItem="Uvq-8x-r6A" secondAttribute="leading" id="yA6-4V-lV0"/>
+                            <constraint firstItem="mbM-DW-gJB" firstAttribute="top" secondItem="Uvq-8x-r6A" secondAttribute="top" id="11o-BO-zDa"/>
+                            <constraint firstItem="Xdp-Rg-0em" firstAttribute="trailing" secondItem="Uvq-8x-r6A" secondAttribute="trailing" id="3sx-hb-FN8"/>
+                            <constraint firstItem="mbM-DW-gJB" firstAttribute="trailing" secondItem="Uvq-8x-r6A" secondAttribute="trailing" id="DbA-2z-VQa"/>
+                            <constraint firstItem="Xdp-Rg-0em" firstAttribute="leading" secondItem="Uvq-8x-r6A" secondAttribute="leading" id="EDY-tX-JpX"/>
+                            <constraint firstItem="Xdp-Rg-0em" firstAttribute="top" secondItem="mbM-DW-gJB" secondAttribute="bottom" id="M2p-iJ-85O"/>
+                            <constraint firstItem="Xdp-Rg-0em" firstAttribute="bottom" secondItem="Uvq-8x-r6A" secondAttribute="bottom" id="ZEI-IV-Jvo"/>
+                            <constraint firstItem="mbM-DW-gJB" firstAttribute="leading" secondItem="Uvq-8x-r6A" secondAttribute="leading" id="yWK-r6-AWi"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" selectedImage="house.fill" id="tEJ-lM-heK"/>
                     <connections>
                         <outlet property="collectionView" destination="Xdp-Rg-0em" id="Vc7-bR-xAK"/>
+                        <outlet property="pickerViewButton" destination="GIg-mr-v42" id="IJs-qD-dck"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2b3-qW-fDe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3531" y="-646"/>
+            <point key="canvasLocation" x="3530.5343511450378" y="-646.47887323943667"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FSp-Ah-9at">
@@ -479,6 +501,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chevron.down.circle.fill" catalog="system" width="128" height="123"/>
         <image name="heart" catalog="system" width="128" height="107"/>
         <image name="heart.fill" catalog="system" width="128" height="107"/>
         <image name="house" catalog="system" width="128" height="104"/>
@@ -488,6 +511,9 @@
         <image name="note.text" catalog="system" width="128" height="107"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemMintColor">
             <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

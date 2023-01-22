@@ -10,23 +10,35 @@ import UIKit
 class HomeVC: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var pickerViewButton: UIButton!
     
     private let viewModel = HomeViewModel()
     private var collectionHelper : HomeVCCollectionHelper!
+    private var pickerHelper : HomeVCPickerViewHelper!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupUI()
         setupBindings()
-        viewModel.viewDidLoad()
+        viewModel.viewDidLoad(filterText: "")
     }
+    
+    @IBAction func popUpPicker(_ sender: UIButton){
+        
+        let alert = pickerHelper.popUpClicked()
+        self.present(alert, animated: true, completion: nil)
+
+    }
+    
 }
 
 private extension HomeVC{
     
     private func setupUI(){
         collectionHelper = .init(collectionView: collectionView, viewModel: viewModel, navigationController:navigationController!)
+        pickerHelper = .init(viewModel: viewModel,pickerViewButton: pickerViewButton)
     }
     
     func setupBindings(){
