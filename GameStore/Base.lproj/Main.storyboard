@@ -196,7 +196,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iLz-Lq-iFH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4600.7633587786258" y="-368.3098591549296"/>
+            <point key="canvasLocation" x="4601" y="-437"/>
         </scene>
         <!--Notes-->
         <scene sceneID="GuY-iV-K7L">
@@ -319,7 +319,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BOk-im-xZU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5527.480916030534" y="1088.7323943661972"/>
+            <point key="canvasLocation" x="5740" y="1089"/>
         </scene>
         <!--Favorites-->
         <scene sceneID="qJC-ll-d3q">
@@ -359,7 +359,40 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ws2-dP-ZN4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4600.7633587786258" y="303.52112676056339"/>
+            <point key="canvasLocation" x="4601" y="301"/>
+        </scene>
+        <!--AnimationVC-->
+        <scene sceneID="Erm-cj-o57">
+            <objects>
+                <viewController storyboardIdentifier="AnimationVC" id="Di2-0p-hSx" customClass="AnimationVC" customModule="GameStore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Aey-Hb-uqJ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tkb-Ji-ieV" customClass="LottieAnimationView" customModule="Lottie">
+                                <rect key="frame" x="0.0" y="229.66666666666663" width="393" height="393"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="393" id="1Pn-3r-Ifg"/>
+                                    <constraint firstAttribute="height" constant="393" id="IXd-8C-MPm"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gdJ-Ac-pcC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Tkb-Ji-ieV" firstAttribute="centerX" secondItem="Aey-Hb-uqJ" secondAttribute="centerX" id="3tZ-jT-o7G"/>
+                            <constraint firstItem="Tkb-Ji-ieV" firstAttribute="centerY" secondItem="Aey-Hb-uqJ" secondAttribute="centerY" id="OJG-Cj-KGi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Vn7-fw-cw0"/>
+                    <connections>
+                        <outlet property="animationView" destination="Tkb-Ji-ieV" id="Jbn-5i-v7t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W69-L4-vB0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6602.2900763358775" y="-55.633802816901408"/>
         </scene>
         <!--Details-->
         <scene sceneID="3ju-sR-KGI">
@@ -478,7 +511,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lr7-Md-Zq7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7889.3129770992364" y="-35.211267605633807"/>
+            <point key="canvasLocation" x="5741" y="-1199"/>
         </scene>
         <!--Item-->
         <scene sceneID="ofW-6X-v1a">
@@ -497,7 +530,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uRN-yr-gZr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6962.5954198473282" y="-35.211267605633807"/>
+            <point key="canvasLocation" x="4601" y="-1198"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xWl-zF-6eZ">
@@ -515,7 +548,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VWs-6v-iqB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4600.7633587786258" y="1088.7323943661972"/>
+            <point key="canvasLocation" x="4601" y="1089"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="geb-Sc-cIk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AYW-Q5-eRl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lL9-bG-VVx">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Di2-0p-hSx" kind="relationship" relationship="rootViewController" id="1QC-NT-S9x"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bx0-ug-QFM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5675.5725190839694" y="-55.633802816901408"/>
         </scene>
     </scenes>
     <resources>

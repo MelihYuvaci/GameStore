@@ -30,18 +30,27 @@ class DetailsVC: UIViewController {
     
     @IBAction func favoriteButtonClicked(_ sender: UIBarButtonItem) {
         if titleLabel.text != "" && detailID != nil  {
-
+            
             if favoriteValue == false {
                 favoriteValue = true
             }
             
+            if let vc = self.storyboard?.instantiateViewController(withIdentifier: "AnimationVC") as? AnimationVC{
+                vc.navigationItem.hidesBackButton = true
+                vc.jsonName = "362-like"
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+            
             let viewModel = DetailsViewModel(favorite: favoriteValue, name: titleLabel.text ?? "No Text")
             if favoriteValue == true {
-                viewModel.saveFavorites { _ in
-                    let alertController = UIAlertController(title: "Information", message: "Favorilere Eklenildi", preferredStyle: .alert)
-                    alertController.addAction(.init(title: "Ok", style: .default))
-                    self.present(alertController, animated: true)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.5){
+                    viewModel.saveFavorites { _ in
+                        let alertController = UIAlertController(title: "Information", message: "Favorilere Eklenildi", preferredStyle: .alert)
+                        alertController.addAction(.init(title: "Ok", style: .default))
+                        self.present(alertController, animated: true)
+                    }
                 }
+                
             }
         }
     }

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29085831297F470000AEE02D /* AnimationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29085830297F470000AEE02D /* AnimationVC.swift */; };
+		29085837297F48F600AEE02D /* 79053-delete-message.json in Resources */ = {isa = PBXBuildFile; fileRef = 29085834297F48F600AEE02D /* 79053-delete-message.json */; };
+		29085838297F48F600AEE02D /* 362-like.json in Resources */ = {isa = PBXBuildFile; fileRef = 29085835297F48F600AEE02D /* 362-like.json */; };
+		29085839297F48F600AEE02D /* 1127-success.json in Resources */ = {isa = PBXBuildFile; fileRef = 29085836297F48F600AEE02D /* 1127-success.json */; };
 		2935EC2A2979334C008DCB51 /* SearchVCTableViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2935EC292979334C008DCB51 /* SearchVCTableViewHelper.swift */; };
 		2935EC2D29793403008DCB51 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2935EC2B29793403008DCB51 /* SearchCell.swift */; };
 		2935EC2E29793403008DCB51 /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2935EC2C29793403008DCB51 /* SearchCell.xib */; };
@@ -55,6 +59,10 @@
 
 /* Begin PBXFileReference section */
 		027D058A81494B2534AD9DB4 /* Pods-GameStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameStore.release.xcconfig"; path = "Target Support Files/Pods-GameStore/Pods-GameStore.release.xcconfig"; sourceTree = "<group>"; };
+		29085830297F470000AEE02D /* AnimationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationVC.swift; sourceTree = "<group>"; };
+		29085834297F48F600AEE02D /* 79053-delete-message.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "79053-delete-message.json"; sourceTree = "<group>"; };
+		29085835297F48F600AEE02D /* 362-like.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "362-like.json"; sourceTree = "<group>"; };
+		29085836297F48F600AEE02D /* 1127-success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "1127-success.json"; sourceTree = "<group>"; };
 		2935EC292979334C008DCB51 /* SearchVCTableViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVCTableViewHelper.swift; sourceTree = "<group>"; };
 		2935EC2B29793403008DCB51 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		2935EC2C29793403008DCB51 /* SearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
@@ -122,6 +130,33 @@
 				AD545E90E37A0505B31FAF2E /* Pods_GameStore.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2908582F297F46AD00AEE02D /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				29085832297F48C500AEE02D /* View */,
+				29085833297F48D400AEE02D /* JsonFiles */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
+		29085832297F48C500AEE02D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				29085830297F470000AEE02D /* AnimationVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		29085833297F48D400AEE02D /* JsonFiles */ = {
+			isa = PBXGroup;
+			children = (
+				29085835297F48F600AEE02D /* 362-like.json */,
+				29085836297F48F600AEE02D /* 1127-success.json */,
+				29085834297F48F600AEE02D /* 79053-delete-message.json */,
+			);
+			path = JsonFiles;
 			sourceTree = "<group>";
 		};
 		2935EC28297931EC008DCB51 /* Helpers */ = {
@@ -445,6 +480,7 @@
 			isa = PBXGroup;
 			children = (
 				29ABA318297ED48B00E37253 /* BubbleTabbar */,
+				2908582F297F46AD00AEE02D /* Lottie */,
 			);
 			path = "Supporting Groups";
 			sourceTree = "<group>";
@@ -543,10 +579,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2935EC2E29793403008DCB51 /* SearchCell.xib in Resources */,
+				29085839297F48F600AEE02D /* 1127-success.json in Resources */,
 				299B4EBA297559AD00E752DB /* LaunchScreen.storyboard in Resources */,
 				299B4EB7297559AD00E752DB /* Assets.xcassets in Resources */,
 				299B4EE22975E20500E752DB /* HomeCell.xib in Resources */,
+				29085838297F48F600AEE02D /* 362-like.json in Resources */,
 				299B4EB5297559AC00E752DB /* Main.storyboard in Resources */,
+				29085837297F48F600AEE02D /* 79053-delete-message.json in Resources */,
 				2980DBFE297A61D900D099AB /* NotesCell.xib in Resources */,
 				299EEAA0297AFA4A00CE15EE /* FavoriteCell.xib in Resources */,
 				29ABA31E297ED48B00E37253 /* .gitkeep in Resources */,
@@ -635,6 +674,7 @@
 				299B4ED42975627300E752DB /* NotesVC.swift in Sources */,
 				299AF934297726890038BB6B /* DetailsModel.swift in Sources */,
 				299EEA9F297AFA4A00CE15EE /* FavoriteCell.swift in Sources */,
+				29085831297F470000AEE02D /* AnimationVC.swift in Sources */,
 				299AC0892979FE2E00B87F31 /* NewNoteViewModel.swift in Sources */,
 				299B4EB0297559AC00E752DB /* SceneDelegate.swift in Sources */,
 			);
