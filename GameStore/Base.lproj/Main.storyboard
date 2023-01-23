@@ -81,21 +81,27 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="ixf-iH-res">
+                                <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Uvq-8x-r6A"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                         <constraints>
                             <constraint firstItem="mbM-DW-gJB" firstAttribute="top" secondItem="Uvq-8x-r6A" secondAttribute="top" id="11o-BO-zDa"/>
+                            <constraint firstItem="ixf-iH-res" firstAttribute="centerY" secondItem="dHr-po-U6Y" secondAttribute="centerY" id="1vb-ii-IX8"/>
                             <constraint firstItem="Xdp-Rg-0em" firstAttribute="trailing" secondItem="Uvq-8x-r6A" secondAttribute="trailing" id="3sx-hb-FN8"/>
                             <constraint firstItem="mbM-DW-gJB" firstAttribute="trailing" secondItem="Uvq-8x-r6A" secondAttribute="trailing" id="DbA-2z-VQa"/>
                             <constraint firstItem="Xdp-Rg-0em" firstAttribute="leading" secondItem="Uvq-8x-r6A" secondAttribute="leading" id="EDY-tX-JpX"/>
                             <constraint firstItem="Xdp-Rg-0em" firstAttribute="top" secondItem="mbM-DW-gJB" secondAttribute="bottom" id="M2p-iJ-85O"/>
+                            <constraint firstItem="ixf-iH-res" firstAttribute="centerX" secondItem="dHr-po-U6Y" secondAttribute="centerX" id="YgB-zQ-Yac"/>
                             <constraint firstItem="Xdp-Rg-0em" firstAttribute="bottom" secondItem="Uvq-8x-r6A" secondAttribute="bottom" id="ZEI-IV-Jvo"/>
                             <constraint firstItem="mbM-DW-gJB" firstAttribute="leading" secondItem="Uvq-8x-r6A" secondAttribute="leading" id="yWK-r6-AWi"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" selectedImage="house.fill" id="tEJ-lM-heK"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="ixf-iH-res" id="fV8-eU-uJP"/>
                         <outlet property="collectionView" destination="Xdp-Rg-0em" id="Vc7-bR-xAK"/>
                         <outlet property="pickerViewButton" destination="GIg-mr-v42" id="IJs-qD-dck"/>
                     </connections>

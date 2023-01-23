@@ -11,6 +11,7 @@ class HomeVC: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pickerViewButton: UIButton!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     private let viewModel = HomeViewModel()
     private var collectionHelper : HomeVCCollectionHelper!
@@ -42,6 +43,11 @@ private extension HomeVC{
     }
     
     func setupBindings(){
+        viewModel.isLoadingIndicatorShowing = {[weak self] isShowing in
+            self?.activityIndicator.isHidden = !isShowing
+            isShowing ? self?.activityIndicator.startAnimating() : self?.activityIndicator.stopAnimating()
+        }
+        
         viewModel.onErrorDetected = {[weak self] message in
             let alertController = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
             alertController.addAction(.init(title: "Ok", style: .default))
