@@ -128,10 +128,10 @@
             </objects>
             <point key="canvasLocation" x="43.511450381679388" y="-34.507042253521128"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Bubble Tab Bar Controller-->
         <scene sceneID="mDR-ne-0qw">
             <objects>
-                <tabBarController storyboardIdentifier="Tabbar" automaticallyAdjustsScrollViewInsets="NO" id="gWf-3H-vdx" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="Tabbar" automaticallyAdjustsScrollViewInsets="NO" id="gWf-3H-vdx" customClass="BubbleTabBarController" customModule="GameStore" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Tak-PR-Htc">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -410,7 +410,7 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="200" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwq-82-pPw">
                                                 <rect key="frame" x="15" y="308" width="363" height="411"/>
-                                                <mutableString key="text">Oyun Detayı Burda OlacakOyun Detayı Burda OlacakOyun Detayı Burda OlacakOyun Detayı Burda OlacakOyun Detayı Burda OlacakOyun Detayı Burda OlacakOyun Detayı Burda OlacakOyun Detayı Burda OlacakOyun Detayı Burda OlacakOyun Detayı Burda OlacakOyun Detayı Burda OlacakOyun Detayı Burda OlacakOyun Detayı Burda OlacakOyun Detayı Burda OlacakOyun Detayı Burda OlacakOyun Detayı Burda OlacakOyun Detayı Burda OlacakOyun Detayı Burda OlacakOyun Detayı Burda OlacakOyun Detayı Burda OlacakOyun Detayı Burda OlacakOyun Detayı Burda OlacakOyun Detayı Burda OlacakOyun Detayı Burda OlacakOyun Detayı Burda Olacak</mutableString>
+                                                <string key="text">Oyun Detayı Burda OlacakOyun Detayı Burda OlacakOyun Detayı Burda OlacakOyun Detayı Burda OlacakOyun Detayı Burda OlacakOyun Detayı Burda OlacakOyun Detayı Burda OlacakOyun Detayı Burda OlacakOyun Detayı Burda OlacakOyun Detayı Burda OlacakOyun Detayı Burda OlacakOyun Detayı Burda OlacakOyun Detayı Burda OlacakOyun Detayı Burda OlacakOyun Detayı Burda OlacakOyun Detayı Burda OlacakOyun Detayı Burda OlacakOyun Detayı Burda OlacakOyun Detayı Burda OlacakOyun Detayı Burda OlacakOyun Detayı Burda OlacakOyun Detayı Burda OlacakOyun Detayı Burda OlacakOyun Detayı Burda OlacakOyun Detayı Burda Olacak</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
