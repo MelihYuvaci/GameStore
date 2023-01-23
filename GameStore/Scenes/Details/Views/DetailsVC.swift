@@ -9,6 +9,7 @@ import UIKit
 
 class DetailsVC: UIViewController {
     
+    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var relasedLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
