@@ -11,6 +11,7 @@ class DetailsViewModel{
     
     let favorite : Bool?
     let name : String?
+    var isLoadingIndicatorShowing : ((Bool)-> ())?
    
     init(favorite: Bool?, name: String?) {
         self.favorite = favorite
@@ -25,6 +26,7 @@ class DetailsViewModel{
     private let model = DetailsModel()
     
     func viewDidLoad(id: Int){
+        isLoadingIndicatorShowing?(true)
         model.fetchData(id: id)
     }
     
@@ -37,10 +39,12 @@ class DetailsViewModel{
 extension DetailsViewModel: DetailsModelDelegate{
     
     func didDataFetch(data: Details) {
+        isLoadingIndicatorShowing?(false)
         showData?(data)
     }
     
     func didFailWithError(error: Error) {
+        isLoadingIndicatorShowing?(false)
         print(error)
         onErrorDetected?("Please try again later !")
     }

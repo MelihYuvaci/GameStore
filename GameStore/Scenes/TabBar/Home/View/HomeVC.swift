@@ -11,6 +11,7 @@ class HomeVC: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pickerViewButton: UIButton!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     private let viewModel = HomeViewModel()
     private var collectionHelper : HomeVCCollectionHelper!
@@ -29,7 +30,7 @@ class HomeVC: UIViewController {
         
         let alert = pickerHelper.popUpClicked()
         self.present(alert, animated: true, completion: nil)
-
+        
     }
     
 }
@@ -42,6 +43,7 @@ private extension HomeVC{
     }
     
     func setupBindings(){
+        
         viewModel.onErrorDetected = {[weak self] message in
             let alertController = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
             alertController.addAction(.init(title: "Ok", style: .default))
@@ -50,6 +52,11 @@ private extension HomeVC{
         
         viewModel.refreshItems = {[weak self] items in
             self?.collectionHelper.setItems(items)
+        }
+        
+        viewModel.isLoadingIndicatorShowing = {[weak self] isShowing in
+            self?.activityIndicator.isHidden = !isShowing
+            isShowing ? self?.activityIndicator.startAnimating() : self?.activityIndicator.stopAnimating()
         }
     }
 }

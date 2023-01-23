@@ -13,6 +13,7 @@ class DetailsVC: UIViewController {
     @IBOutlet weak var relasedLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var detailsLabel: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var detailID : Int?
     var favoriteValue : Bool = false
@@ -59,6 +60,10 @@ private extension DetailsVC{
             let alertController = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
             alertController.addAction(.init(title: "Ok", style: .default))
             self?.present(alertController, animated: true)
+        }
+        viewModel.isLoadingIndicatorShowing = {[weak self] isShowing in
+            self?.activityIndicator.isHidden = !isShowing
+            isShowing ? self?.activityIndicator.startAnimating() : self?.activityIndicator.stopAnimating()
         }
     }
 }
