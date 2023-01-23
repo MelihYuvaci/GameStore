@@ -19,6 +19,7 @@ class AnimationVC: UIViewController {
         
         lottieAnimation()
         DispatchQueue.main.asyncAfter(deadline: .now() + 2){
+            self.stopAnimation()
             self.navigationController?.popViewController(animated: true)
         }
     }
