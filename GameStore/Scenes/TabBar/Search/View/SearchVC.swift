@@ -25,7 +25,8 @@ class SearchVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         searchBar.text = ""
-        viewModel.viewDidLoad(searchText: "")
+        tableViewHelper.items.removeAll()
+        tableView?.reloadData()
     }
 }
 
@@ -62,8 +63,14 @@ private extension SearchVC {
 extension SearchVC :UISearchBarDelegate{
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        setupBindings()
-        viewModel.viewDidLoad(searchText: searchText)
+        if searchText == "" {
+            tableViewHelper.items.removeAll()
+            tableView?.reloadData()
+        }else {
+            setupBindings()
+            viewModel.viewDidLoad(searchText: searchText)
+        }
+        
     }
 }
 
