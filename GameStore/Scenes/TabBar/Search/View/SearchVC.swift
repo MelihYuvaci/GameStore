@@ -11,13 +11,14 @@ class SearchVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     private let viewModel = SearchViewModel()
     private var tableViewHelper : SearchVCTableViewHelper!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        activityIndicator.isHidden = true
         setupUI()
         searchBar.delegate = self
     }
@@ -47,6 +48,12 @@ private extension SearchVC {
             alertController.addAction(.init(title: "Ok", style: .default))
             self?.present(alertController, animated: true)
         }
+        
+        viewModel.isLoadingIndicatorShowing = {[weak self] isShowing in
+            self?.activityIndicator.isHidden = !isShowing
+            isShowing ? self?.activityIndicator.startAnimating() : self?.activityIndicator.stopAnimating()
+        }
+        
     }
 }
 
