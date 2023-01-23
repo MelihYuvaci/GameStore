@@ -7,4 +7,5 @@ target 'GameStore' do
 pod 'paper-onboarding'
 pod 'Kingfisher'
 pod 'Alamofire'
+pod 'lottie-ios'
 end

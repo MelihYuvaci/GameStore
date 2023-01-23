@@ -23,10 +23,15 @@ class NewNoteVC: UIViewController {
     
     
     @IBAction func saveClicked(_ sender: UIBarButtonItem) {
+        if let vc = self.storyboard?.instantiateViewController(withIdentifier: "AnimationVC") as? AnimationVC{
+            vc.jsonName = "1127-success"
+            vc.navigationItem.hidesBackButton = true
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
         
         let viewModel = NewNoteViewModel(name: gameName.text ?? "No text", comment: gameComment.text ?? "No Comment")
         viewModel.saveTask { _ in
-            DispatchQueue.main.async {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2){
                 self.navigationController?.popViewController(animated: true)
             }
         }
@@ -37,7 +42,7 @@ class NewNoteVC: UIViewController {
 }
 
 extension NewNoteVC {
-     func createNotfications() {
+    func createNotfications() {
         // CONTENT
         let content = UNMutableNotificationContent()
         content.title = "Added"
@@ -45,7 +50,7 @@ extension NewNoteVC {
         content.sound = UNNotificationSound.default
         
         // TRIGGER
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
         
         // CUSTOM ACTIONS
         

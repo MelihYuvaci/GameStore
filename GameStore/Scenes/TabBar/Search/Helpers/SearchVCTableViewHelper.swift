@@ -16,7 +16,7 @@ class SearchVCTableViewHelper: NSObject {
     private weak var viewModel : SearchViewModel?
     private weak var navigationController: UINavigationController?
     
-    private var items : [RowItem?] = []
+    var items : [RowItem?] = []
     
     init(tableView: UITableView, viewModel: SearchViewModel, navigationController: UINavigationController) {
         self.tableView = tableView

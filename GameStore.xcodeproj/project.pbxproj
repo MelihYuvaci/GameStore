@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29085831297F470000AEE02D /* AnimationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29085830297F470000AEE02D /* AnimationVC.swift */; };
+		29085837297F48F600AEE02D /* 79053-delete-message.json in Resources */ = {isa = PBXBuildFile; fileRef = 29085834297F48F600AEE02D /* 79053-delete-message.json */; };
+		29085838297F48F600AEE02D /* 362-like.json in Resources */ = {isa = PBXBuildFile; fileRef = 29085835297F48F600AEE02D /* 362-like.json */; };
+		29085839297F48F600AEE02D /* 1127-success.json in Resources */ = {isa = PBXBuildFile; fileRef = 29085836297F48F600AEE02D /* 1127-success.json */; };
 		2935EC2A2979334C008DCB51 /* SearchVCTableViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2935EC292979334C008DCB51 /* SearchVCTableViewHelper.swift */; };
 		2935EC2D29793403008DCB51 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2935EC2B29793403008DCB51 /* SearchCell.swift */; };
 		2935EC2E29793403008DCB51 /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2935EC2C29793403008DCB51 /* SearchCell.xib */; };
@@ -43,6 +47,10 @@
 		299EEA99297AF9AE00CE15EE /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299EEA98297AF9AE00CE15EE /* FavoritesViewModel.swift */; };
 		299EEA9F297AFA4A00CE15EE /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299EEA9D297AFA4A00CE15EE /* FavoriteCell.swift */; };
 		299EEAA0297AFA4A00CE15EE /* FavoriteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 299EEA9E297AFA4A00CE15EE /* FavoriteCell.xib */; };
+		29ABA31D297ED48B00E37253 /* BubbleTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ABA319297ED48B00E37253 /* BubbleTabBar.swift */; };
+		29ABA31E297ED48B00E37253 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 29ABA31A297ED48B00E37253 /* .gitkeep */; };
+		29ABA31F297ED48B00E37253 /* BubbleTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ABA31B297ED48B00E37253 /* BubbleTabBarController.swift */; };
+		29ABA320297ED48B00E37253 /* CBTabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ABA31C297ED48B00E37253 /* CBTabBarButton.swift */; };
 		29DCA91E2976A52800029F13 /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DCA91D2976A52800029F13 /* PinterestLayout.swift */; };
 		29F454DC297C09BC00DA35A7 /* FavoriteCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F454DB297C09BC00DA35A7 /* FavoriteCoreDataManager.swift */; };
 		29F454DF297C0A0700DA35A7 /* NoteCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F454DE297C0A0700DA35A7 /* NoteCoreDataManager.swift */; };
@@ -51,6 +59,10 @@
 
 /* Begin PBXFileReference section */
 		027D058A81494B2534AD9DB4 /* Pods-GameStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameStore.release.xcconfig"; path = "Target Support Files/Pods-GameStore/Pods-GameStore.release.xcconfig"; sourceTree = "<group>"; };
+		29085830297F470000AEE02D /* AnimationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationVC.swift; sourceTree = "<group>"; };
+		29085834297F48F600AEE02D /* 79053-delete-message.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "79053-delete-message.json"; sourceTree = "<group>"; };
+		29085835297F48F600AEE02D /* 362-like.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "362-like.json"; sourceTree = "<group>"; };
+		29085836297F48F600AEE02D /* 1127-success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "1127-success.json"; sourceTree = "<group>"; };
 		2935EC292979334C008DCB51 /* SearchVCTableViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVCTableViewHelper.swift; sourceTree = "<group>"; };
 		2935EC2B29793403008DCB51 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		2935EC2C29793403008DCB51 /* SearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
@@ -89,6 +101,10 @@
 		299EEA98297AF9AE00CE15EE /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
 		299EEA9D297AFA4A00CE15EE /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
 		299EEA9E297AFA4A00CE15EE /* FavoriteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteCell.xib; sourceTree = "<group>"; };
+		29ABA319297ED48B00E37253 /* BubbleTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleTabBar.swift; sourceTree = "<group>"; };
+		29ABA31A297ED48B00E37253 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		29ABA31B297ED48B00E37253 /* BubbleTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleTabBarController.swift; sourceTree = "<group>"; };
+		29ABA31C297ED48B00E37253 /* CBTabBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBTabBarButton.swift; sourceTree = "<group>"; };
 		29DCA91D2976A52800029F13 /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
 		29F454DB297C09BC00DA35A7 /* FavoriteCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCoreDataManager.swift; sourceTree = "<group>"; };
 		29F454DE297C0A0700DA35A7 /* NoteCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCoreDataManager.swift; sourceTree = "<group>"; };
@@ -114,6 +130,33 @@
 				AD545E90E37A0505B31FAF2E /* Pods_GameStore.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2908582F297F46AD00AEE02D /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				29085832297F48C500AEE02D /* View */,
+				29085833297F48D400AEE02D /* JsonFiles */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
+		29085832297F48C500AEE02D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				29085830297F470000AEE02D /* AnimationVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		29085833297F48D400AEE02D /* JsonFiles */ = {
+			isa = PBXGroup;
+			children = (
+				29085835297F48F600AEE02D /* 362-like.json */,
+				29085836297F48F600AEE02D /* 1127-success.json */,
+				29085834297F48F600AEE02D /* 79053-delete-message.json */,
+			);
+			path = JsonFiles;
 			sourceTree = "<group>";
 		};
 		2935EC28297931EC008DCB51 /* Helpers */ = {
@@ -271,6 +314,7 @@
 				299AC0772979F4DB00B87F31 /* DataModel */,
 				299B4EC529755C3400E752DB /* Scenes */,
 				299B4EC629755CF100E752DB /* Supporting Files */,
+				29ABA321297ED62500E37253 /* Supporting Groups */,
 				299B4EB3297559AC00E752DB /* Main.storyboard */,
 				299B4EBB297559AD00E752DB /* Info.plist */,
 			);
@@ -421,6 +465,26 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		29ABA318297ED48B00E37253 /* BubbleTabbar */ = {
+			isa = PBXGroup;
+			children = (
+				29ABA319297ED48B00E37253 /* BubbleTabBar.swift */,
+				29ABA31A297ED48B00E37253 /* .gitkeep */,
+				29ABA31B297ED48B00E37253 /* BubbleTabBarController.swift */,
+				29ABA31C297ED48B00E37253 /* CBTabBarButton.swift */,
+			);
+			path = BubbleTabbar;
+			sourceTree = "<group>";
+		};
+		29ABA321297ED62500E37253 /* Supporting Groups */ = {
+			isa = PBXGroup;
+			children = (
+				29ABA318297ED48B00E37253 /* BubbleTabbar */,
+				2908582F297F46AD00AEE02D /* Lottie */,
+			);
+			path = "Supporting Groups";
+			sourceTree = "<group>";
+		};
 		29DCA91C2976A50200029F13 /* Layouts */ = {
 			isa = PBXGroup;
 			children = (
@@ -515,12 +579,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				2935EC2E29793403008DCB51 /* SearchCell.xib in Resources */,
+				29085839297F48F600AEE02D /* 1127-success.json in Resources */,
 				299B4EBA297559AD00E752DB /* LaunchScreen.storyboard in Resources */,
 				299B4EB7297559AD00E752DB /* Assets.xcassets in Resources */,
 				299B4EE22975E20500E752DB /* HomeCell.xib in Resources */,
+				29085838297F48F600AEE02D /* 362-like.json in Resources */,
 				299B4EB5297559AC00E752DB /* Main.storyboard in Resources */,
+				29085837297F48F600AEE02D /* 79053-delete-message.json in Resources */,
 				2980DBFE297A61D900D099AB /* NotesCell.xib in Resources */,
 				299EEAA0297AFA4A00CE15EE /* FavoriteCell.xib in Resources */,
+				29ABA31E297ED48B00E37253 /* .gitkeep in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,6 +643,7 @@
 			files = (
 				299EEA99297AF9AE00CE15EE /* FavoritesViewModel.swift in Sources */,
 				299AC0832979FDE600B87F31 /* NewNoteVC.swift in Sources */,
+				29ABA31D297ED48B00E37253 /* BubbleTabBar.swift in Sources */,
 				299B4EB2297559AC00E752DB /* OnboardVC.swift in Sources */,
 				299B4EE42975F62100E752DB /* GameData.swift in Sources */,
 				299B4ED0297561FC00E752DB /* SearchVC.swift in Sources */,
@@ -586,6 +655,7 @@
 				299AF937297726B70038BB6B /* DetailsViewModel.swift in Sources */,
 				2935EC2A2979334C008DCB51 /* SearchVCTableViewHelper.swift in Sources */,
 				299AF93A297759F40038BB6B /* DetailsData.swift in Sources */,
+				29ABA320297ED48B00E37253 /* CBTabBarButton.swift in Sources */,
 				299B4ECA29755F0A00E752DB /* HomeVC.swift in Sources */,
 				299B4EE12975E20500E752DB /* HomeCell.swift in Sources */,
 				2935EC2D29793403008DCB51 /* SearchCell.swift in Sources */,
@@ -597,12 +667,14 @@
 				29DCA91E2976A52800029F13 /* PinterestLayout.swift in Sources */,
 				299B4ED22975623200E752DB /* FavoritesVC.swift in Sources */,
 				299B4EDE2975D7B200E752DB /* HomeVCCollectionHelper.swift in Sources */,
+				29ABA31F297ED48B00E37253 /* BubbleTabBarController.swift in Sources */,
 				299AF93129771AAB0038BB6B /* DetailsVC.swift in Sources */,
 				299AC0742979EEFF00B87F31 /* NotesViewModel.swift in Sources */,
 				299AC07A2979F4FA00B87F31 /* DataModel.xcdatamodeld in Sources */,
 				299B4ED42975627300E752DB /* NotesVC.swift in Sources */,
 				299AF934297726890038BB6B /* DetailsModel.swift in Sources */,
 				299EEA9F297AFA4A00CE15EE /* FavoriteCell.swift in Sources */,
+				29085831297F470000AEE02D /* AnimationVC.swift in Sources */,
 				299AC0892979FE2E00B87F31 /* NewNoteViewModel.swift in Sources */,
 				299B4EB0297559AC00E752DB /* SceneDelegate.swift in Sources */,
 			);
