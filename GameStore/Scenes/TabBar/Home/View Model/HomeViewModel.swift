@@ -26,7 +26,7 @@ class HomeViewModel{
     
 }
 
-//MARK: - Data Binding
+//MARK: - DataBinding & HomeModelDelegate
 
 extension HomeViewModel: HomeModelDelegate{
     

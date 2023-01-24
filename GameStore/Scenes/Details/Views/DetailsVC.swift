@@ -55,6 +55,8 @@ class DetailsVC: UIViewController {
     }
 }
 
+//MARK: - Presentation Binding
+
 private extension DetailsVC{
     
     private func setupBindings(){
@@ -76,6 +78,8 @@ private extension DetailsVC{
         }
     }
 }
+
+//MARK: - Details Model
 
 struct Details {
     let imageUrl : String

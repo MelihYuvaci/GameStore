@@ -26,7 +26,7 @@ class SearchViewModel{
     
 }
 
-//MARK: - Data Binding
+//MARK: - DataBinding & SearchModelDelegate
 
 extension SearchViewModel: SearchModelDelegate{
     

@@ -13,6 +13,8 @@ protocol DetailsModelDelegate: AnyObject {
     func didFailWithError(error:Error)
 }
 
+//MARK: - Business Logic
+
 class DetailsModel {
     
     weak var delegate : DetailsModelDelegate?
