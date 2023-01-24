@@ -24,6 +24,9 @@ class HomeVC: UIViewController {
         setupUI()
         setupBindings()
         viewModel.viewDidLoad(filterText: "")
+
+        
+        
     }
     
     @IBAction func popUpPicker(_ sender: UIButton){

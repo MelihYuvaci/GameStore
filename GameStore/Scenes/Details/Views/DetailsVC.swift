@@ -25,7 +25,7 @@ class DetailsVC: UIViewController {
         
         setupBindings()
         viewModel.viewDidLoad(id: detailID ?? 0)
-        
+       
     }
     
     @IBAction func favoriteButtonClicked(_ sender: UIBarButtonItem) {
@@ -50,7 +50,6 @@ class DetailsVC: UIViewController {
                         self.present(alertController, animated: true)
                     }
                 }
-                
             }
         }
     }

@@ -21,22 +21,20 @@ class NewNoteVC: UIViewController {
         center.delegate = self
     }
     
-    
-    @IBAction func saveClicked(_ sender: UIBarButtonItem) {
+    @IBAction func saveButtonClicked(_ sender: UIButton) {
         if let vc = self.storyboard?.instantiateViewController(withIdentifier: "AnimationVC") as? AnimationVC{
-            vc.jsonName = "1127-success"
-            vc.navigationItem.hidesBackButton = true
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
-        
-        let viewModel = NewNoteViewModel(name: gameName.text ?? "No text", comment: gameComment.text ?? "No Comment")
-        viewModel.saveTask { _ in
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2){
-                self.navigationController?.popViewController(animated: true)
-            }
-        }
-        createNotfications()
-        
+                    vc.jsonName = "1127-success"
+                    vc.navigationItem.hidesBackButton = true
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }
+                
+                let viewModel = NewNoteViewModel(name: gameName.text ?? "No text", comment: gameComment.text ?? "No Comment")
+                viewModel.saveTask { _ in
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2){
+                        self.navigationController?.popViewController(animated: true)
+                    }
+                }
+                createNotfications()
     }
     
 }
