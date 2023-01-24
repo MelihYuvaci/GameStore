@@ -17,17 +17,23 @@ class HomeVCPickerViewHelper : NSObject{
     var selectedRow = 0
     
     var games : KeyValuePairs =
-        [
-            "Popüler": Constants.Home.PickerViewHelper.filterPopularValue,
-            "En Eski Oyun" : Constants.Home.PickerViewHelper.filterOldValue,
-            "En Yeni Oyun" : Constants.Home.PickerViewHelper.filterNewValue
-        ]
+    [
+        "Popüler": Constants.Home.PickerViewHelper.filterPopularValue,
+        "En Eski Oyun" : Constants.Home.PickerViewHelper.filterOldValue,
+        "En Yeni Oyun" : Constants.Home.PickerViewHelper.filterNewValue
+    ]
     
     init(viewModel:HomeViewModel,pickerViewButton: UIButton) {
         self.viewModel = viewModel
         self.pickerViewButton = pickerViewButton
         super.init()
     }
+    
+    
+}
+//MARK: - PopUpPickerView
+
+extension HomeVCPickerViewHelper {
     
     func popUpClicked()-> UIAlertController{
         let vc = UIViewController()
@@ -63,6 +69,9 @@ class HomeVCPickerViewHelper : NSObject{
     }
 }
 
+
+//MARK: - UIPickerViewDelegate
+
 extension HomeVCPickerViewHelper: UIPickerViewDelegate {
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView
@@ -79,16 +88,17 @@ extension HomeVCPickerViewHelper: UIPickerViewDelegate {
     }
     
 }
+//MARK: - UIPickerViewDataSource
 
 extension HomeVCPickerViewHelper : UIPickerViewDataSource{
     func numberOfComponents(in pickerView: UIPickerView) -> Int
-        {
-            return 1 //return 2
-        }
-        
-        func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int
-        {
-            games.count
-        }
+    {
+        return 1 //return 2
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int
+    {
+        games.count
+    }
 }
 

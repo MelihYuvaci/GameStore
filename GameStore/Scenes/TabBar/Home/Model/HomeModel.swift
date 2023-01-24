@@ -13,6 +13,8 @@ protocol HomeModelDelegate : AnyObject{
     func didFailWithError(error: Error)
 }
 
+//MARK: - Business Logic
+
 class HomeModel {
     
     private(set) var data: [GameData] = []
