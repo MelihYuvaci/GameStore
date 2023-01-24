@@ -26,6 +26,12 @@ class SearchVCTableViewHelper: NSObject {
         self.navigationController = navigationController
     }
     
+}
+
+//MARK: - Setup TableView & Items
+
+extension SearchVCTableViewHelper{
+    
     private func setupTableView(){
         tableView?.register(.init(nibName: Constants.Search.TableViewHelper.nibName, bundle: nil), forCellReuseIdentifier: cellIdentifier)
         tableView?.delegate = self
@@ -39,6 +45,8 @@ class SearchVCTableViewHelper: NSObject {
     
 }
 
+//MARK: - UITableViewDelegate
+
 extension SearchVCTableViewHelper : UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyBoard: UIStoryboard = UIStoryboard(name: Constants.Search.TableViewHelper.storyboardName, bundle: nil)
@@ -48,6 +56,8 @@ extension SearchVCTableViewHelper : UITableViewDelegate{
         }
     }
 }
+
+//MARK: - UITableViewDataSource
 
 extension SearchVCTableViewHelper : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -12,6 +12,7 @@ protocol SearchModelDelegate: AnyObject {
     func didDataFetch()
     func didFailWithError(error: Error)
 }
+//MARK: - Business Logic
 
 class SearchModel{
     

@@ -26,8 +26,7 @@ class SearchCell: UITableViewCell {
         
         // Configure the view for the selected state
     }
-
-   
+    /// Configure
     func configure(with model: SearchCellModel){
         DispatchQueue.main.async {
             self.id = model.id
@@ -36,6 +35,7 @@ class SearchCell: UITableViewCell {
         }
     }
 }
+//MARK: - Cell Model
 
 struct SearchCellModel{
     let id : Int

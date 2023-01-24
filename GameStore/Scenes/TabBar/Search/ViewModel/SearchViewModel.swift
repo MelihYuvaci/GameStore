@@ -26,6 +26,8 @@ class SearchViewModel{
     
 }
 
+//MARK: - Data Binding
+
 extension SearchViewModel: SearchModelDelegate{
     
     func didDataFetch() {

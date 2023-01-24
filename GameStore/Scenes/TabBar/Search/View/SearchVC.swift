@@ -29,6 +29,7 @@ class SearchVC: UIViewController {
         tableView?.reloadData()
     }
 }
+//MARK: - Presentation Logic
 
 private extension SearchVC {
     
@@ -58,7 +59,7 @@ private extension SearchVC {
     }
 }
 
-
+//MARK: - UISearchBarDelegate
 
 extension SearchVC :UISearchBarDelegate{
     
