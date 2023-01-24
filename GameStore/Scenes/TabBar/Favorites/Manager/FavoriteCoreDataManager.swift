@@ -14,6 +14,8 @@ class FavoriteCoreDataManager {
     
     private init (){}
     
+    //MARK: - Fetch Items
+    
     func getAllFavorites () -> [Favorites] {
         let request: NSFetchRequest<Favorites> = Favorites.fetchRequest()
         let secondSort = NSSortDescriptor(key: #keyPath(Favorites.name), ascending: false)
@@ -27,6 +29,7 @@ class FavoriteCoreDataManager {
         
         return items
     }
+    //MARK: - Save Items
     
     func saveFavorites(name: String, favorite: Bool,  completion: @escaping (Bool) -> Void) {
         let items = Favorites(context: persistentContainer.viewContext)
@@ -36,6 +39,8 @@ class FavoriteCoreDataManager {
         saveContext()
         completion(true)
     }
+    
+    //MARK: - Delete Items
     
     func deleteFavorites(item : Favorites, completion: @escaping (Bool) -> Void) {
         let request: NSFetchRequest<Favorites> = Favorites.fetchRequest()

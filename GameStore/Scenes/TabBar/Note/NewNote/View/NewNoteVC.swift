@@ -39,6 +39,8 @@ class NewNoteVC: UIViewController {
     
 }
 
+//MARK: - User Local Notification
+
 extension NewNoteVC {
     func createNotfications() {
         // CONTENT
@@ -73,6 +75,8 @@ extension NewNoteVC {
         }
     }
 }
+
+//MARK: - UNUserNotificationCenterDelegate
 
 extension NewNoteVC : UNUserNotificationCenterDelegate{
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {

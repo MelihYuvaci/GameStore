@@ -37,6 +37,8 @@ class NotesVC: UIViewController {
     }
 }
 
+//MARK: - Setup TableView
+
 extension  NotesVC{
     private func setupTableView(){
         tableView.delegate = self
@@ -44,6 +46,7 @@ extension  NotesVC{
         tableView.register(UINib(nibName: Constants.Note.View.nibName, bundle: nil), forCellReuseIdentifier: Constants.Note.View.reusableIdentifier)
     }
 }
+//MARK: - UITableViewDelegate
 
 extension NotesVC : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -51,6 +54,7 @@ extension NotesVC : UITableViewDelegate {
     }
 }
 
+//MARK: - UITableViewDataSource
 
 extension NotesVC : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

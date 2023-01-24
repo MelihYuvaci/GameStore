@@ -32,7 +32,10 @@ class FavoritesVC: UIViewController {
     
 }
 
+//MARK: - Setup TableView
+
 private extension  FavoritesVC{
+    
     private func setupTableView(){
         tableView.delegate = self
         tableView.dataSource = self
@@ -41,12 +44,15 @@ private extension  FavoritesVC{
     
 }
 
+//MARK: - UITableViewDelegate
+
 extension FavoritesVC : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
+//MARK: - UITableViewDataSource
 
 extension FavoritesVC : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -14,6 +14,8 @@ class NoteCoreDataManager {
     
     private init (){}
     
+    //MARK: - Fetch Items
+    
     func getAllNotes () -> [Notes] {
         let request: NSFetchRequest<Notes> = Notes.fetchRequest()
         let firstSort = NSSortDescriptor(key: #keyPath(Notes.name), ascending: true)
@@ -30,6 +32,8 @@ class NoteCoreDataManager {
         return items
     }
     
+    //MARK: - Save Items
+    
     func saveNotes(name: String, comment: String, completion: @escaping (Bool) -> Void) {
         let items = Notes(context: persistentContainer.viewContext)
         items.id = UUID()
@@ -38,6 +42,8 @@ class NoteCoreDataManager {
         saveContext()
         completion(true)
     }
+    
+    //MARK: - Delete Items
     
     func deleteNotes(item : Notes, completion: @escaping (Bool) -> Void) {
         let request: NSFetchRequest<Notes> = Notes.fetchRequest()
