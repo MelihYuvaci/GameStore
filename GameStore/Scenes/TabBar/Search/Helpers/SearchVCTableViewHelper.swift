@@ -11,7 +11,7 @@ class SearchVCTableViewHelper: NSObject {
     
     typealias RowItem = SearchCellModel
     
-    private let cellIdentifier = "ReusableSearchCell"
+    private let cellIdentifier = Constants.Search.TableViewHelper.cellIdentifier
     private var tableView : UITableView?
     private weak var viewModel : SearchViewModel?
     private weak var navigationController: UINavigationController?
@@ -26,8 +26,14 @@ class SearchVCTableViewHelper: NSObject {
         self.navigationController = navigationController
     }
     
+}
+
+//MARK: - Setup TableView & Items
+
+extension SearchVCTableViewHelper{
+    
     private func setupTableView(){
-        tableView?.register(.init(nibName: "SearchCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
+        tableView?.register(.init(nibName: Constants.Search.TableViewHelper.nibName, bundle: nil), forCellReuseIdentifier: cellIdentifier)
         tableView?.delegate = self
         tableView?.dataSource = self
     }
@@ -39,15 +45,19 @@ class SearchVCTableViewHelper: NSObject {
     
 }
 
+//MARK: - UITableViewDelegate
+
 extension SearchVCTableViewHelper : UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        if let vc = storyBoard.instantiateViewController(withIdentifier: "DetailsVC") as? DetailsVC{
+        let storyBoard: UIStoryboard = UIStoryboard(name: Constants.Search.TableViewHelper.storyboardName, bundle: nil)
+        if let vc = storyBoard.instantiateViewController(withIdentifier: Constants.Search.TableViewHelper.navigationIdentifier) as? DetailsVC{
             vc.detailID = items[indexPath.row]?.id
             navigationController?.pushViewController(vc, animated: true)
         }
     }
 }
+
+//MARK: - UITableViewDataSource
 
 extension SearchVCTableViewHelper : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

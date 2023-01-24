@@ -36,6 +36,8 @@ class DetailsViewModel{
     
 }
 
+//MARK: - DataBinding & DetailsModelDelegate
+
 extension DetailsViewModel: DetailsModelDelegate{
     
     func didDataFetch(data: Details) {

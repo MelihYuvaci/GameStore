@@ -158,7 +158,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" placeholder="Search Games.." translatesAutoresizingMaskIntoConstraints="NO" id="cd1-bH-C8e">
+                            <searchBar contentMode="redraw" placeholder="Search Games..." translatesAutoresizingMaskIntoConstraints="NO" id="cd1-bH-C8e">
                                 <rect key="frame" x="0.0" y="59" width="393" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -210,7 +210,7 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ApF-IJ-1SG">
                                 <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                                 <items>
-                                    <navigationItem id="wY5-MO-Oxc">
+                                    <navigationItem title="Notes" id="wY5-MO-Oxc">
                                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="mjz-Ab-RhQ">
                                             <connections>
                                                 <action selector="addButtonClicked:" destination="tSr-dv-yNG" id="D6L-mz-bTj"/>
@@ -608,9 +608,6 @@
             <point key="canvasLocation" x="5675.5725190839694" y="-55.633802816901408"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="Tkb-Ji-ieV"/>
-    </designables>
     <resources>
         <image name="chevron.down.circle.fill" catalog="system" width="128" height="123"/>
         <image name="heart" catalog="system" width="128" height="107"/>
@@ -618,8 +615,8 @@
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
-        <image name="note" width="880" height="440"/>
         <image name="note" catalog="system" width="128" height="107"/>
+        <image name="note" width="880" height="440"/>
         <image name="note.text" catalog="system" width="128" height="107"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

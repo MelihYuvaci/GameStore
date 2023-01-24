@@ -25,8 +25,6 @@ class HomeVC: UIViewController {
         setupBindings()
         viewModel.viewDidLoad(filterText: "")
 
-        
-        
     }
     
     @IBAction func popUpPicker(_ sender: UIButton){
@@ -37,6 +35,8 @@ class HomeVC: UIViewController {
     }
     
 }
+
+//MARK: - Presentation Logic
 
 private extension HomeVC{
     

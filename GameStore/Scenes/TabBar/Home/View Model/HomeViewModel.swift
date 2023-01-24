@@ -24,11 +24,9 @@ class HomeViewModel{
         model.fetchData(filter: filterText)
     }
     
-    func itemPressed(_ index: Int){
-        
-    }
-    
 }
+
+//MARK: - DataBinding & HomeModelDelegate
 
 extension HomeViewModel: HomeModelDelegate{
     

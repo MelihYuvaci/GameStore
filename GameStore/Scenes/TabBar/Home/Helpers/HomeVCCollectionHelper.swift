@@ -11,13 +11,13 @@ class HomeVCCollectionHelper : NSObject {
     
     typealias RowItem = HomeCellModel
     
-    private let cellIdentifier = "ReusableHomeCell"
+    private let cellIdentifier = Constants.Home.CollectionHelper.cellIdentifier
     private var collectionView : UICollectionView?
     private weak var viewModel : HomeViewModel?
     private weak var navigationController: UINavigationController?
     
     private var items: [RowItem?] = []
-   
+    
     init(collectionView: UICollectionView, viewModel:HomeViewModel,navigationController:UINavigationController) {
         self.collectionView = collectionView
         self.viewModel = viewModel
@@ -26,31 +26,39 @@ class HomeVCCollectionHelper : NSObject {
         self.navigationController = navigationController
     }
     
+}
+
+//MARK: - Setup CollectionView & Items
+
+extension HomeVCCollectionHelper{
+    
     private func setupCollectionView(){
-        collectionView?.register(.init(nibName: "HomeCell", bundle: nil), forCellWithReuseIdentifier: cellIdentifier)
+        collectionView?.register(.init(nibName: Constants.Home.CollectionHelper.nibName, bundle: nil), forCellWithReuseIdentifier: cellIdentifier)
         collectionView?.delegate = self
         collectionView?.dataSource = self
         if let layout = collectionView?.collectionViewLayout as? PinterestLayout {
             layout.delegate = self
         }
     }
-    
     func setItems(_ items: [RowItem]){
         self.items = items
         collectionView?.reloadData()
     }
+    
 }
+
+//MARK: - UICollectionViewDelegate
 
 extension HomeVCCollectionHelper : UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        viewModel?.itemPressed(indexPath.row)
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        if let vc = storyBoard.instantiateViewController(withIdentifier: "DetailsVC") as? DetailsVC{
+        let storyBoard: UIStoryboard = UIStoryboard(name: Constants.Home.CollectionHelper.storyboardName, bundle: nil)
+        if let vc = storyBoard.instantiateViewController(withIdentifier: Constants.Home.CollectionHelper.navigationIdentifier) as? DetailsVC{
             vc.detailID = items[indexPath.row]?.id
             navigationController?.pushViewController(vc, animated: true)
         }
     }
 }
+//MARK: - UICollectionViewDataSource
 
 extension HomeVCCollectionHelper : UICollectionViewDataSource {
     
@@ -66,12 +74,14 @@ extension HomeVCCollectionHelper : UICollectionViewDataSource {
     }
     
 }
+
+//MARK: - PinterestLayoutDelegate
 extension HomeVCCollectionHelper : PinterestLayoutDelegate {
     
     func collectionView(collectionView: UICollectionView, heightForPhotoAt indexPath: IndexPath, with width: CGFloat) -> CGFloat {
         return 200
     }
-
+    
     func collectionView(collectionView: UICollectionView, heightForCaptionAt indexPath: IndexPath, with width: CGFloat) -> CGFloat {
         if let post = items[indexPath.item] {
             let captionFont = UIFont.systemFont(ofSize: 14)
@@ -79,7 +89,7 @@ extension HomeVCCollectionHelper : PinterestLayoutDelegate {
             let height = (captionHeight * 2) - 10
             return height
         }
-
+        
         return 0.0
     }
     

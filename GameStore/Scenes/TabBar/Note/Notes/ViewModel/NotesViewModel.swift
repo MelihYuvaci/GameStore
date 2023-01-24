@@ -19,11 +19,9 @@ class NotesViewModel {
         self.refreshData()
     }
     
-    
     func notesAtIndex(_ index: Int) -> Notes {
         return notes[index]
     }
-    
     
     func refreshData (){
         notes = NoteCoreDataManager.shared.getAllNotes()
