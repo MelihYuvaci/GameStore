@@ -21,10 +21,12 @@ class SearchViewModel{
     
     func viewDidLoad(searchText: String){
         isLoadingIndicatorShowing?(true)
-        model.fetchData(search: searchText)
+        model.fetchData(search:searchText.replacingOccurrences(of: " ", with: "-"))
     }
     
 }
+
+//MARK: - DataBinding & SearchModelDelegate
 
 extension SearchViewModel: SearchModelDelegate{
     

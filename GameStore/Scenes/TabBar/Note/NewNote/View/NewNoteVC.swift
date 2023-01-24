@@ -21,10 +21,9 @@ class NewNoteVC: UIViewController {
         center.delegate = self
     }
     
-    
-    @IBAction func saveClicked(_ sender: UIBarButtonItem) {
-        if let vc = self.storyboard?.instantiateViewController(withIdentifier: "AnimationVC") as? AnimationVC{
-            vc.jsonName = "1127-success"
+    @IBAction func saveButtonClicked(_ sender: UIButton) {
+        if let vc = self.storyboard?.instantiateViewController(withIdentifier: Constants.NewNote.navigationIdentifier) as? AnimationVC{
+            vc.jsonName = Constants.NewNote.jsonName
             vc.navigationItem.hidesBackButton = true
             self.navigationController?.pushViewController(vc, animated: true)
         }
@@ -36,10 +35,11 @@ class NewNoteVC: UIViewController {
             }
         }
         createNotfications()
-        
     }
     
 }
+
+//MARK: - User Local Notification
 
 extension NewNoteVC {
     func createNotfications() {
@@ -55,18 +55,18 @@ extension NewNoteVC {
         // CUSTOM ACTIONS
         
         // Define Action
-        let snoozeAction = UNNotificationAction(identifier: "Snooze", title: "Snooze", options: [])
-        let deleteAction = UNNotificationAction(identifier: "DeleteAction", title: "Delete", options: [.destructive])
+        let snoozeAction = UNNotificationAction(identifier: Constants.NewNote.notificationSnoozeIdentifier, title: "Snooze", options: [])
+        let deleteAction = UNNotificationAction(identifier: Constants.NewNote.notificationDeleteIdentifier, title: "Delete", options: [.destructive])
         
         // Create Category
-        let category = UNNotificationCategory(identifier: "MyNotificationsCategory", actions: [snoozeAction, deleteAction], intentIdentifiers: [], options: [])
+        let category = UNNotificationCategory(identifier: Constants.NewNote.categoryIdentifier, actions: [snoozeAction, deleteAction], intentIdentifiers: [], options: [])
         
         // Register Category
         center.setNotificationCategories([category])
-        content.categoryIdentifier = "MyNotificationsCategory"
+        content.categoryIdentifier = Constants.NewNote.categoryIdentifier
         
         // REQUEST
-        let identifier = "FirstUserNotification"
+        let identifier = Constants.NewNote.requestIdentifier
         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
         center.add(request) { (error) in
             if error != nil {
@@ -75,6 +75,8 @@ extension NewNoteVC {
         }
     }
 }
+
+//MARK: - UNUserNotificationCenterDelegate
 
 extension NewNoteVC : UNUserNotificationCenterDelegate{
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {

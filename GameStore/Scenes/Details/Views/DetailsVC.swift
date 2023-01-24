@@ -25,7 +25,7 @@ class DetailsVC: UIViewController {
         
         setupBindings()
         viewModel.viewDidLoad(id: detailID ?? 0)
-        
+       
     }
     
     @IBAction func favoriteButtonClicked(_ sender: UIBarButtonItem) {
@@ -35,9 +35,9 @@ class DetailsVC: UIViewController {
                 favoriteValue = true
             }
             
-            if let vc = self.storyboard?.instantiateViewController(withIdentifier: "AnimationVC") as? AnimationVC{
+            if let vc = self.storyboard?.instantiateViewController(withIdentifier: Constants.Details.View.navigationIdentifier) as? AnimationVC{
                 vc.navigationItem.hidesBackButton = true
-                vc.jsonName = "362-like"
+                vc.jsonName = Constants.Details.View.jsonName
                 self.navigationController?.pushViewController(vc, animated: true)
             }
             
@@ -50,11 +50,12 @@ class DetailsVC: UIViewController {
                         self.present(alertController, animated: true)
                     }
                 }
-                
             }
         }
     }
 }
+
+//MARK: - Presentation Binding
 
 private extension DetailsVC{
     
@@ -77,6 +78,8 @@ private extension DetailsVC{
         }
     }
 }
+
+//MARK: - Details Model
 
 struct Details {
     let imageUrl : String

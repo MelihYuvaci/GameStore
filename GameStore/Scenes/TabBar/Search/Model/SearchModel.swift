@@ -12,6 +12,7 @@ protocol SearchModelDelegate: AnyObject {
     func didDataFetch()
     func didFailWithError(error: Error)
 }
+//MARK: - Business Logic
 
 class SearchModel{
     
@@ -20,7 +21,7 @@ class SearchModel{
     weak var delegate : SearchModelDelegate?
     
     func fetchData(search: String){
-        AF.request("https://api.rawg.io/api/games?key=8a73fc08dbb0431b96e9cb965775dc0b&search=\(search)").responseDecodable(of:SearchApi.self) { res in
+        AF.request("\(Constants.Search.Model.modelApi)\(search)").responseDecodable(of:SearchApi.self) { res in
             guard let response = res.value else {
                 self.delegate?.didFailWithError(error: res.error!)
                 return

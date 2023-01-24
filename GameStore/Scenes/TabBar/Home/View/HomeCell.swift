@@ -18,7 +18,7 @@ class HomeCell: UICollectionViewCell {
         super.awakeFromNib()
 
     }
-    
+    ///Configure
     func configure(with model: HomeCellModel){
         id = model.id
         nameTitle.text = model.name
@@ -26,6 +26,8 @@ class HomeCell: UICollectionViewCell {
     }
     
 }
+
+//MARK: - Cell Model
 
 struct HomeCellModel{
     let id : Int
