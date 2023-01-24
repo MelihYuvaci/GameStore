@@ -20,12 +20,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="8Gk-Lt-NZG">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="7uC-gH-NL5">
+                        <barButtonItem key="rightBarButtonItem" title="Item" style="plain" id="7uC-gH-NL5">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="yVS-Pq-ntj">
-                                <rect key="frame" x="320" y="4.6666666666666679" width="57" height="35"/>
+                                <rect key="frame" x="295" y="4.6666666666666679" width="82" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Skip"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Skip &gt;&gt;"/>
                                 <connections>
                                     <action selector="skipButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mJJ-aA-3iW"/>
                                 </connections>
@@ -569,6 +570,9 @@
             <point key="canvasLocation" x="5675.5725190839694" y="-55.633802816901408"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="Tkb-Ji-ieV"/>
+    </designables>
     <resources>
         <image name="chevron.down.circle.fill" catalog="system" width="128" height="123"/>
         <image name="heart" catalog="system" width="128" height="107"/>
