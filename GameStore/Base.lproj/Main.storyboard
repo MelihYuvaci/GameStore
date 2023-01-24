@@ -409,19 +409,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tkb-Ji-ieV" customClass="LottieAnimationView" customModule="Lottie">
-                                <rect key="frame" x="0.0" y="229.66666666666663" width="393" height="393.00000000000011"/>
+                                <rect key="frame" x="0.0" y="232" width="393" height="388"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="393" id="1Pn-3r-Ifg"/>
-                                    <constraint firstAttribute="height" constant="393" id="IXd-8C-MPm"/>
+                                    <constraint firstAttribute="width" constant="393" id="kgm-oI-bbG"/>
+                                    <constraint firstAttribute="height" constant="388" id="yZ1-bc-iCU"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gdJ-Ac-pcC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Tkb-Ji-ieV" firstAttribute="centerX" secondItem="Aey-Hb-uqJ" secondAttribute="centerX" id="3tZ-jT-o7G"/>
-                            <constraint firstItem="Tkb-Ji-ieV" firstAttribute="centerY" secondItem="Aey-Hb-uqJ" secondAttribute="centerY" id="OJG-Cj-KGi"/>
+                            <constraint firstItem="Tkb-Ji-ieV" firstAttribute="centerX" secondItem="Aey-Hb-uqJ" secondAttribute="centerX" id="5kP-2P-FgN"/>
+                            <constraint firstItem="Tkb-Ji-ieV" firstAttribute="centerY" secondItem="Aey-Hb-uqJ" secondAttribute="centerY" id="gVX-nY-bJl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Vn7-fw-cw0"/>
@@ -608,6 +608,9 @@
             <point key="canvasLocation" x="5675.5725190839694" y="-55.633802816901408"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="Tkb-Ji-ieV"/>
+    </designables>
     <resources>
         <image name="chevron.down.circle.fill" catalog="system" width="128" height="123"/>
         <image name="heart" catalog="system" width="128" height="107"/>
