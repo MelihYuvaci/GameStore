@@ -61,7 +61,7 @@ extension HomeVCCollectionHelper : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! HomeCell
         cell.configure(with: items[indexPath.row]!)
-        cell.backgroundColor = .systemGray2
+        cell.backgroundColor = UIColor(red: 0.97, green: 0.95, blue: 0.95, alpha: 1.00)
         return cell
     }
     

@@ -63,35 +63,34 @@ extension OnboardVC: PaperOnboardingDelegate {
 extension OnboardVC:PaperOnboardingDataSource{
     
     func onboardingItem(at index: Int) -> OnboardingItemInfo {
-        
         return [
-            OnboardingItemInfo(informationImage: UIImage(named: "Hotels")!,
-                               title: "Hotels",
-                               description: "All hotels and hostels are sorted by hospitality rating",
-                               pageIcon: UIImage(named: "Key")!,
-                               color: UIColor(red: 0.40, green: 0.56, blue: 0.71, alpha: 1.00),
+            OnboardingItemInfo(informationImage: UIImage(named: "Character")!,
+                               title: "Browse Games",
+                               description: "You can examine the games as you wish and have information",
+                               pageIcon: UIImage(systemName: "gamecontroller")!,
+                               color: UIColor(red: 0.33, green: 0.69, blue: 0.88, alpha: 1.00),
                                titleColor: UIColor.white,
                                descriptionColor: UIColor.white,
                                titleFont: UIFont.systemFont(ofSize: 36),
                                descriptionFont: UIFont.systemFont(ofSize: 14)),
             
-            OnboardingItemInfo(informationImage: UIImage(named: "Banks")!,
-                               title: "Banks",
-                               description: "We carefully verify all banks before add them into the app",
-                               pageIcon: UIImage(named: "Wallet")!,
-                               color: UIColor(red: 0.40, green: 0.69, blue: 0.71, alpha: 1.00),
+            OnboardingItemInfo(informationImage: UIImage(named: "Character2")!,
+                               title: "Add Favorites",
+                               description: "You can add them to favorites and review them later",
+                               pageIcon: UIImage(systemName: "cart")!,
+                               color: UIColor(red: 0.46, green: 0.91, blue: 0.70, alpha: 1.00),
                                titleColor: UIColor.white,
                                descriptionColor: UIColor.white,
                                titleFont: UIFont.systemFont(ofSize: 36),
                                descriptionFont: UIFont.systemFont(ofSize: 14)),
             
-            OnboardingItemInfo(informationImage: UIImage(named: "Stores")!,
-                               title: "Stores",
-                               description: "All local stores are categorized for your convenience",
-                               pageIcon: UIImage(named: "Shopping-cart")!,
-                               color: UIColor(red: 0.61, green: 0.56, blue: 0.74, alpha: 1.00),
-                               titleColor: UIColor.white,
-                               descriptionColor: UIColor.white,
+            OnboardingItemInfo(informationImage: UIImage(named: "Character3")!,
+                               title: "Take Note",
+                               description: "You can make comments and take notes about the games",
+                               pageIcon: UIImage(systemName: "book")!,
+                               color: UIColor(red: 0.97, green: 0.82, blue: 0.37, alpha: 1.00),
+                               titleColor: UIColor.black,
+                               descriptionColor: UIColor.black,
                                titleFont: UIFont.systemFont(ofSize: 36),
                                descriptionFont: UIFont.systemFont(ofSize: 14))
         ][index]
