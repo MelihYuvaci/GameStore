@@ -41,7 +41,7 @@ class NoteCoreDataManager {
     
     func deleteNotes(item : Notes, completion: @escaping (Bool) -> Void) {
         let request: NSFetchRequest<Notes> = Notes.fetchRequest()
-        request.predicate = NSPredicate(format: "id = %@", item.id!.uuidString)
+        request.predicate = NSPredicate(format: Constants.Note.CoreDataManager.predicateFormat, item.id!.uuidString)
         
         do {
             let context = persistentContainer.viewContext
@@ -61,7 +61,7 @@ class NoteCoreDataManager {
     //MARK: - Core Data stack
     
     lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "DataModel")
+        let container = NSPersistentContainer(name: Constants.Note.CoreDataManager.persistantContainerName)
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")

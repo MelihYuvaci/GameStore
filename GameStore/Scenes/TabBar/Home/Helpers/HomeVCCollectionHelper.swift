@@ -11,7 +11,7 @@ class HomeVCCollectionHelper : NSObject {
     
     typealias RowItem = HomeCellModel
     
-    private let cellIdentifier = "ReusableHomeCell"
+    private let cellIdentifier = Constants.Home.CollectionHelper.cellIdentifier
     private var collectionView : UICollectionView?
     private weak var viewModel : HomeViewModel?
     private weak var navigationController: UINavigationController?
@@ -27,7 +27,7 @@ class HomeVCCollectionHelper : NSObject {
     }
     
     private func setupCollectionView(){
-        collectionView?.register(.init(nibName: "HomeCell", bundle: nil), forCellWithReuseIdentifier: cellIdentifier)
+        collectionView?.register(.init(nibName: Constants.Home.CollectionHelper.nibName, bundle: nil), forCellWithReuseIdentifier: cellIdentifier)
         collectionView?.delegate = self
         collectionView?.dataSource = self
         if let layout = collectionView?.collectionViewLayout as? PinterestLayout {
@@ -44,8 +44,8 @@ class HomeVCCollectionHelper : NSObject {
 extension HomeVCCollectionHelper : UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         viewModel?.itemPressed(indexPath.row)
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        if let vc = storyBoard.instantiateViewController(withIdentifier: "DetailsVC") as? DetailsVC{
+        let storyBoard: UIStoryboard = UIStoryboard(name: Constants.Home.CollectionHelper.storyboardName, bundle: nil)
+        if let vc = storyBoard.instantiateViewController(withIdentifier: Constants.Home.CollectionHelper.navigationIdentifier) as? DetailsVC{
             vc.detailID = items[indexPath.row]?.id
             navigationController?.pushViewController(vc, animated: true)
         }

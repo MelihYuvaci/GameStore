@@ -18,9 +18,9 @@ class HomeVCPickerViewHelper : NSObject{
     
     var games : KeyValuePairs =
         [
-            "Popüler": "",
-            "En Eski Oyun" : "&ordering=-created",
-            "En Yeni Oyun" : "&ordering=created"
+            "Popüler": Constants.Home.PickerViewHelper.filterPopularValue,
+            "En Eski Oyun" : Constants.Home.PickerViewHelper.filterOldValue,
+            "En Yeni Oyun" : Constants.Home.PickerViewHelper.filterNewValue
         ]
     
     init(viewModel:HomeViewModel,pickerViewButton: UIButton) {

@@ -54,6 +54,7 @@
 		29DCA91E2976A52800029F13 /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DCA91D2976A52800029F13 /* PinterestLayout.swift */; };
 		29F454DC297C09BC00DA35A7 /* FavoriteCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F454DB297C09BC00DA35A7 /* FavoriteCoreDataManager.swift */; };
 		29F454DF297C0A0700DA35A7 /* NoteCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F454DE297C0A0700DA35A7 /* NoteCoreDataManager.swift */; };
+		29FBA4FF29806AB20092529C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FBA4FE29806AB20092529C /* Constants.swift */; };
 		51CC44D524FBC6A12F15B455 /* Pods_GameStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD545E90E37A0505B31FAF2E /* Pods_GameStore.framework */; };
 /* End PBXBuildFile section */
 
@@ -108,6 +109,7 @@
 		29DCA91D2976A52800029F13 /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
 		29F454DB297C09BC00DA35A7 /* FavoriteCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCoreDataManager.swift; sourceTree = "<group>"; };
 		29F454DE297C0A0700DA35A7 /* NoteCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCoreDataManager.swift; sourceTree = "<group>"; };
+		29FBA4FE29806AB20092529C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AD545E90E37A0505B31FAF2E /* Pods_GameStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C65F02272F5B5148D7ED5460 /* Pods-GameStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameStore.debug.xcconfig"; path = "Target Support Files/Pods-GameStore/Pods-GameStore.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -310,6 +312,7 @@
 		299B4EAC297559AC00E752DB /* GameStore */ = {
 			isa = PBXGroup;
 			children = (
+				29FBA4FD29806A9A0092529C /* Constants */,
 				299B4EC429755C1B00E752DB /* Delegates */,
 				299AC0772979F4DB00B87F31 /* DataModel */,
 				299B4EC529755C3400E752DB /* Scenes */,
@@ -509,6 +512,14 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
+		29FBA4FD29806A9A0092529C /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				29FBA4FE29806AB20092529C /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		540F33691C660D6CC8367580 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -676,6 +687,7 @@
 				299EEA9F297AFA4A00CE15EE /* FavoriteCell.swift in Sources */,
 				29085831297F470000AEE02D /* AnimationVC.swift in Sources */,
 				299AC0892979FE2E00B87F31 /* NewNoteViewModel.swift in Sources */,
+				29FBA4FF29806AB20092529C /* Constants.swift in Sources */,
 				299B4EB0297559AC00E752DB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

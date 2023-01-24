@@ -43,7 +43,7 @@ class OnboardVC: UIViewController {
     
     
     @IBAction func skipButtonClicked(_ sender: UIButton) {
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "Tabbar") as? UITabBarController {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: Constants.Onboard.navigationIdentifier) as? UITabBarController {
             vc.navigationItem.hidesBackButton = true
             navigationController?.pushViewController(vc, animated: true)
         }

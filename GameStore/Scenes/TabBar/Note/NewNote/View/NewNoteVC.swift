@@ -22,19 +22,19 @@ class NewNoteVC: UIViewController {
     }
     
     @IBAction func saveButtonClicked(_ sender: UIButton) {
-        if let vc = self.storyboard?.instantiateViewController(withIdentifier: "AnimationVC") as? AnimationVC{
-                    vc.jsonName = "1127-success"
-                    vc.navigationItem.hidesBackButton = true
-                    self.navigationController?.pushViewController(vc, animated: true)
-                }
-                
-                let viewModel = NewNoteViewModel(name: gameName.text ?? "No text", comment: gameComment.text ?? "No Comment")
-                viewModel.saveTask { _ in
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 2){
-                        self.navigationController?.popViewController(animated: true)
-                    }
-                }
-                createNotfications()
+        if let vc = self.storyboard?.instantiateViewController(withIdentifier: Constants.NewNote.navigationIdentifier) as? AnimationVC{
+            vc.jsonName = Constants.NewNote.jsonName
+            vc.navigationItem.hidesBackButton = true
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        
+        let viewModel = NewNoteViewModel(name: gameName.text ?? "No text", comment: gameComment.text ?? "No Comment")
+        viewModel.saveTask { _ in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2){
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
+        createNotfications()
     }
     
 }
@@ -53,18 +53,18 @@ extension NewNoteVC {
         // CUSTOM ACTIONS
         
         // Define Action
-        let snoozeAction = UNNotificationAction(identifier: "Snooze", title: "Snooze", options: [])
-        let deleteAction = UNNotificationAction(identifier: "DeleteAction", title: "Delete", options: [.destructive])
+        let snoozeAction = UNNotificationAction(identifier: Constants.NewNote.notificationSnoozeIdentifier, title: "Snooze", options: [])
+        let deleteAction = UNNotificationAction(identifier: Constants.NewNote.notificationDeleteIdentifier, title: "Delete", options: [.destructive])
         
         // Create Category
-        let category = UNNotificationCategory(identifier: "MyNotificationsCategory", actions: [snoozeAction, deleteAction], intentIdentifiers: [], options: [])
+        let category = UNNotificationCategory(identifier: Constants.NewNote.categoryIdentifier, actions: [snoozeAction, deleteAction], intentIdentifiers: [], options: [])
         
         // Register Category
         center.setNotificationCategories([category])
-        content.categoryIdentifier = "MyNotificationsCategory"
+        content.categoryIdentifier = Constants.NewNote.categoryIdentifier
         
         // REQUEST
-        let identifier = "FirstUserNotification"
+        let identifier = Constants.NewNote.requestIdentifier
         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
         center.add(request) { (error) in
             if error != nil {

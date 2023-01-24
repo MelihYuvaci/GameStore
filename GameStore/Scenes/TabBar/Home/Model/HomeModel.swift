@@ -20,7 +20,7 @@ class HomeModel {
     weak var delegate: HomeModelDelegate?
     
     func fetchData(filter: String){
-        AF.request("https://api.rawg.io/api/games?key=8a73fc08dbb0431b96e9cb965775dc0b\(filter)").responseDecodable(of:ApiData.self) { res in
+        AF.request("\(Constants.Home.Model.modelApi)\(filter)").responseDecodable(of:ApiData.self) { res in
             guard let response = res.value else {
                 self.delegate?.didFailWithError(error: res.error!)
                 return

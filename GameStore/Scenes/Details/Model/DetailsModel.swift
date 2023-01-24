@@ -18,7 +18,7 @@ class DetailsModel {
     weak var delegate : DetailsModelDelegate?
     
     func fetchData(id: Int){
-        AF.request("https://api.rawg.io/api/games/\(id)?key=8a73fc08dbb0431b96e9cb965775dc0b").responseDecodable(of:DetailsData.self) { res in
+        AF.request("\(Constants.Details.Model.modelApi)\(id)\(Constants.Details.Model.apiKey)").responseDecodable(of:DetailsData.self) { res in
             guard let response = res.value else {
                 self.delegate?.didFailWithError(error: res.error!)
                 return

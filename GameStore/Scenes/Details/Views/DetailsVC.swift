@@ -35,9 +35,9 @@ class DetailsVC: UIViewController {
                 favoriteValue = true
             }
             
-            if let vc = self.storyboard?.instantiateViewController(withIdentifier: "AnimationVC") as? AnimationVC{
+            if let vc = self.storyboard?.instantiateViewController(withIdentifier: Constants.Details.View.navigationIdentifier) as? AnimationVC{
                 vc.navigationItem.hidesBackButton = true
-                vc.jsonName = "362-like"
+                vc.jsonName = Constants.Details.View.jsonName
                 self.navigationController?.pushViewController(vc, animated: true)
             }
             

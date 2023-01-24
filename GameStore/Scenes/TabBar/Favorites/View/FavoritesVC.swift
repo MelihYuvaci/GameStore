@@ -36,7 +36,7 @@ private extension  FavoritesVC{
     private func setupTableView(){
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UINib(nibName: "FavoriteCell", bundle: nil), forCellReuseIdentifier: "ReusableFavoriteCell")
+        tableView.register(UINib(nibName: Constants.Favorites.View.nibName, bundle: nil), forCellReuseIdentifier: Constants.Favorites.View.reusableIdentifier)
     }
     
 }
@@ -54,7 +54,7 @@ extension FavoritesVC : UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ReusableFavoriteCell", for: indexPath) as! FavoriteCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Favorites.View.cellIdentifier, for: indexPath) as! FavoriteCell
         cell.favorites = viewModel.favoritesAtIndex(indexPath.row)
         return cell
     }
@@ -66,9 +66,9 @@ extension FavoritesVC : UITableViewDataSource {
             alertController.addAction(UIAlertAction(title: "YES", style: .default, handler: { _ in
                 self.viewModel.deleteItem(indexPath.row) { _ in
                     tableView.deleteRows(at: [indexPath], with: .automatic)
-                    if let vc = self.storyboard?.instantiateViewController(withIdentifier: "AnimationVC") as? AnimationVC{
+                    if let vc = self.storyboard?.instantiateViewController(withIdentifier: Constants.Favorites.View.navigationIdentifier) as? AnimationVC{
                         vc.navigationItem.hidesBackButton = true
-                        vc.jsonName = "79053-delete-message"
+                        vc.jsonName = Constants.Favorites.View.jsonName
                         self.navigationController?.pushViewController(vc, animated: true)
                     }
                 }

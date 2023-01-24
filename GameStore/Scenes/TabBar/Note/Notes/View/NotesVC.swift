@@ -31,7 +31,7 @@ class NotesVC: UIViewController {
     }
     
     @IBAction func addButtonClicked(_ sender: UIBarButtonItem) {
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "NewNoteVC") as? NewNoteVC{
+        if let vc = storyboard?.instantiateViewController(withIdentifier: Constants.Note.View.navigationIdentifier) as? NewNoteVC{
             navigationController?.pushViewController(vc, animated: true)
         }
     }
@@ -41,7 +41,7 @@ extension  NotesVC{
     private func setupTableView(){
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UINib(nibName: "NotesCell", bundle: nil), forCellReuseIdentifier: "ReusableNotesCell")
+        tableView.register(UINib(nibName: Constants.Note.View.nibName, bundle: nil), forCellReuseIdentifier: Constants.Note.View.reusableIdentifier)
     }
 }
 
@@ -58,7 +58,7 @@ extension NotesVC : UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ReusableNotesCell", for: indexPath) as! NotesCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Note.View.reusableIdentifier, for: indexPath) as! NotesCell
         cell.notes = viewModel.notesAtIndex(indexPath.row)
         return cell
     }
@@ -70,9 +70,9 @@ extension NotesVC : UITableViewDataSource {
             alertController.addAction(UIAlertAction(title: "YES", style: .default, handler: { _ in
                 self.viewModel.deleteItem(indexPath.row) { _ in
                     tableView.deleteRows(at: [indexPath], with: .automatic)
-                    if let vc = self.storyboard?.instantiateViewController(withIdentifier: "AnimationVC") as? AnimationVC{
+                    if let vc = self.storyboard?.instantiateViewController(withIdentifier: Constants.Note.View.animationNavigationIdentifier) as? AnimationVC{
                         vc.navigationItem.hidesBackButton = true
-                        vc.jsonName = "79053-delete-message"
+                        vc.jsonName = Constants.Note.View.jsonName
                         self.navigationController?.pushViewController(vc, animated: true)
                     }
                 }

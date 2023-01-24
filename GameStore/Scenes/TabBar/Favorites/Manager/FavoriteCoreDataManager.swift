@@ -39,7 +39,7 @@ class FavoriteCoreDataManager {
     
     func deleteFavorites(item : Favorites, completion: @escaping (Bool) -> Void) {
         let request: NSFetchRequest<Favorites> = Favorites.fetchRequest()
-        request.predicate = NSPredicate(format: "id = %@",item.id!.uuidString)
+        request.predicate = NSPredicate(format: Constants.Favorites.CoreDataManager.predicateFormat,item.id!.uuidString)
         
         do {
             let context = persistentContainer.viewContext
@@ -61,7 +61,7 @@ class FavoriteCoreDataManager {
     //MARK: - Core Data stack
     
     lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "DataModel")
+        let container = NSPersistentContainer(name: Constants.Favorites.CoreDataManager.persistantContainerName)
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
