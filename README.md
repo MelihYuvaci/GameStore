@@ -9,7 +9,7 @@
     Game store application allows you to get information about games. You can find the game you want as you wish and get information about the game. You can add your favorite games to favourites. You can also take notes by commenting on the games. In total, 8 different screens were used. Download and experience now for more. Have fun 😊🎉
     </p>
     
-![Untitled](https://user-images.githubusercontent.com/94677369/214494818-048ced4d-2eae-44ba-89e6-4136d929e366.png)
+![Readme](https://user-images.githubusercontent.com/94677369/214499514-eb10429c-bc22-4a63-838b-9af659ea8611.png)
 
 ## Features 🔥
 
