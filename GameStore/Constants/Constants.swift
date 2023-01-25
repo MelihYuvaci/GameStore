@@ -15,8 +15,6 @@ struct Constants {
     static let persistant_Container = "DataModel"
     static let storyboard_Name = "Main"
     
-    
-    
     struct Onboard {
         static let navigationIdentifier = "Tabbar"
     }
