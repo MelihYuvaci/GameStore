@@ -59,6 +59,10 @@ Melih – [LinkedIn](https://www.linkedin.com/in/melihyuvaci/) – melihyuvaci@i
 
 [GitHub Profile](https://github.com/MelihYuvaci)
 
+## Summary Video
+
+https://user-images.githubusercontent.com/94677369/214509873-39317182-3213-4186-8bd6-c60db17e4ee6.mp4
+
 [swift-image]:https://img.shields.io/badge/swift-5.7-orange.svg
 [swift-url]: https://swift.org/
 [license-image]: https://img.shields.io/badge/License-MIT-blue.svg
