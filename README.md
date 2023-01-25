@@ -1,15 +1,16 @@
 [![Swift Version][swift-image]][swift-url]
 [![Build Status][travis-image]][travis-url]
-[![License][license-image]][license-url]
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/EZSwiftExtensions.svg)](https://img.shields.io/cocoapods/v/LFAlertController.svg)  
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![Platform](https://img.shields.io/cocoapods/p/LFAlertController.svg?style=flat)](http://cocoapods.org/pods/LFAlertController)
 
 # GameStore
 <p align="center">
-    Game store application allows you to get information about games. You can find the game you want as you wish and get information about the game. You can add your favorite games to favourites. You can also take notes by commenting on the games. In total, 8 different screens were used. Download and experience now for more. Have fun 😊
+    Game store application allows you to get information about games. You can find the game you want as you wish and get information about the game. You can add your favorite games to favourites. You can also take notes by commenting on the games. In total, 8 different screens were used. Download and experience now for more. Have fun 😊🎉
     </p>
     
+![Untitled](https://user-images.githubusercontent.com/94677369/214494818-048ced4d-2eae-44ba-89e6-4136d929e366.png)
+
 ## Features 🔥
 
 - Onboarding
@@ -50,13 +51,11 @@
 2. Congratulations!  
 
 ## Contribute 🙋‍♀️🙋
-I would like you for your GameStore contributions, you can contact for more information
+You can contribute to the GameStore
 
-## Meta
+## Meta 🏁
 
 Melih – [LinkedIn](https://www.linkedin.com/in/melihyuvaci/) – melihyuvaci@icloud.com
-
-See ``LICENSE`` for more information.
 
 [GitHub Profile](https://github.com/MelihYuvaci)
 
