@@ -67,7 +67,7 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mbM-DW-gJB">
                                 <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                                 <items>
-                                    <navigationItem title="Home" id="wLb-lb-hg1">
+                                    <navigationItem title="Home 🏠" id="wLb-lb-hg1">
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="9Vn-2h-6Q8">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="GIg-mr-v42">
                                                 <rect key="frame" x="327" y="4.6666666666666679" width="50" height="35"/>
@@ -158,7 +158,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" placeholder="Search Games..." translatesAutoresizingMaskIntoConstraints="NO" id="cd1-bH-C8e">
+                            <searchBar contentMode="redraw" placeholder="Search Games... 🎮 👀" translatesAutoresizingMaskIntoConstraints="NO" id="cd1-bH-C8e">
                                 <rect key="frame" x="0.0" y="59" width="393" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -210,7 +210,7 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ApF-IJ-1SG">
                                 <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                                 <items>
-                                    <navigationItem title="Notes" id="wY5-MO-Oxc">
+                                    <navigationItem title="Notes 📘" id="wY5-MO-Oxc">
                                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="mjz-Ab-RhQ">
                                             <connections>
                                                 <action selector="addButtonClicked:" destination="tSr-dv-yNG" id="D6L-mz-bTj"/>
@@ -246,7 +246,7 @@
             </objects>
             <point key="canvasLocation" x="3531" y="562"/>
         </scene>
-        <!--New Note-->
+        <!--New Note 📝-->
         <scene sceneID="Kfg-oV-35C">
             <objects>
                 <viewController storyboardIdentifier="NewNoteVC" id="ool-TA-7oX" customClass="NewNoteVC" customModule="GameStore" customModuleProvider="target" sceneMemberID="viewController">
@@ -349,7 +349,7 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="New Note" id="bJo-IR-gmu"/>
+                    <navigationItem key="navigationItem" title="New Note 📝" id="bJo-IR-gmu"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="gameComment" destination="igg-3O-HEq" id="Vbw-0q-RCt"/>
@@ -375,7 +375,7 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qif-AV-H1x">
                                 <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                                 <items>
-                                    <navigationItem title="Favorites" id="f2S-aj-PVW"/>
+                                    <navigationItem title="Favorites ❤️‍🔥" id="f2S-aj-PVW"/>
                                 </items>
                             </navigationBar>
                         </subviews>
